@@ -3,7 +3,7 @@ import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './ContactForm.css';  
 import AOS from 'aos';
-import emailjs from '@emailjs/browser';
+ 
 
  
  
@@ -17,19 +17,7 @@ import emailjs from '@emailjs/browser';
   }, []);
  
 
-  (function(){
-    emailjs.init("VNTleMBW5RpUMxBDv");
- })();
-
-  const mailSend = () =>{
-  let  Detail ={
-    name: document.getElementById("name").value,
-    email:document.getElementById("email").value,
-    message:document.getElementById("message").value,
-
-  }
-  
-  }
+ 
  
 
   return (
