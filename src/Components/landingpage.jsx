@@ -4,6 +4,7 @@ import 'aos/dist/aos.css';
 import { Container, Col, Row, Button, Modal } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.css';
 import './App.css'; // You can create this CSS file for styling
+ 
 // import * as Icon from 'react-bootstrap-icons';
 
 import { BarLoader } from 'react-spinners';
@@ -99,8 +100,9 @@ const LandingPage = () => {
         </Col>
       </Row>
       <div className='about'>
-        <h4 data-aos="fade-up"> About</h4>
+        <h4 data-aos="fade-up" > About</h4>
         <Row>
+  
         </Row>
         <h3  data-aos="fade-up">UI<span className='ab-title'>/</span>Web Developer</h3>
         <Row>
