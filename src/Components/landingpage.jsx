@@ -47,7 +47,7 @@ const LandingPage = () => {
     // Simulate loading delay
     setTimeout(() => {
       setLoading(false); // Set to false after the delay
-    }, 8000);
+    }, 8);
 
     AOS.init();
   }, []);
@@ -70,7 +70,7 @@ const LandingPage = () => {
       
     <Container>
       <Row style={{ marginTop: 20 }}>
-        <Col sm={6} className='Home-font-bg' data-aos="fade-right"  data-aos-duration="3000"    data-aos-easing="ease-in-sine">
+        <Col sm={6} className='Home-font-bg' data-aos="fade-right"  data-aos-duration="1000"    data-aos-easing="ease-in-sine">
           <div className='Home-font'>
             <section>
               <span className='am'>AM</span>
@@ -83,7 +83,7 @@ const LandingPage = () => {
           </div>
         </Col>
 
-        <Col sm={6}  data-aos="fade-left"  data-aos-duration="3000">
+        <Col sm={6}  data-aos="fade-left"  data-aos-duration="1100">
           {/* <video
             src="https://cdn.sanity.io/files/599r6htc/localized/ab4fa4eb170518f551d82cad01557e91952840a1.mp4"
             autoPlay
@@ -143,20 +143,8 @@ const LandingPage = () => {
       borderRadius: '8px',
       willChange: 'transform',
     }}>
-      <iframe
-        // loading="lazy"
-        style={{
-          position: 'absolute',
-          width: '100%',
-          height: '100%',
-          top: 0,
-          left: 0,
-          border: 'none',
-          padding: 0,
-          margin: 0,
-        }}
-        src="https://www.canva.com/design/DAF0cDxrFUo/view?embed"
-        allowFullScreen
+    <iframe title="UniqueTitleForIframe" style={{position: 'absolute',width: '100%',height: '100%',top: 0,left: 0,border: 'none',padding: 0,margin: 0,}}src="https://www.canva.com/design/DAF0cDxrFUo/view?embed"
+allowFullScreen
         allow="fullscreen"/>
     </div>)}
          
