@@ -6,7 +6,8 @@ import LandingPage from './Components/landingpage';
 import ContactForm from './Components/ContactForm';
 import reportWebVitals from './reportWebVitals';
 import Experience from './Components/Experience';
-import Footer from './Components/Footer'
+import About from './Components/About';
+import Footer from './Components/Footer';
  
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -14,6 +15,7 @@ root.render(
   <React.StrictMode>
     <Navbar />
     <LandingPage/>
+    <About/>
     <Experience/>
      <ContactForm/>
      <Footer/>
