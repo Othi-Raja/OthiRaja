@@ -8,6 +8,7 @@ import reportWebVitals from './reportWebVitals';
 import Experience from './Components/Experience';
 import About from './Components/About';
 import Footer from './Components/Footer';
+import Figma from './Components/Figma';
  
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -16,6 +17,7 @@ root.render(
     <Navbar />
     <LandingPage/>
     <About/>
+    <Figma/>
     <Experience/>
      <ContactForm/>
      <Footer/>

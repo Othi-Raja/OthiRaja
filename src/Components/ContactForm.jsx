@@ -45,7 +45,7 @@ import AOS from 'aos';
             </Form.Group>
 
             <Button type="submit" className='button_contact button-57' data-aos="fade-in">
-            <span class="text" ><img width="20" height="20" src="https://img.icons8.com/glyph-neue/40/000000/submit-document.png" alt="submit-document"/></span><span>Submit</span>
+            <span className="text" ><img width="20" height="20" src="https://img.icons8.com/glyph-neue/40/000000/submit-document.png" alt="submit-document"/></span><span>Submit</span>
             </Button>
           </Form>
         </Col>
