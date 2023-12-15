@@ -13,7 +13,7 @@ export default class Figma extends Component {
             <div className="card">
                 {/* <iframe src="https://www.figma.com/embed?embed_host=oembed&url=https://www.figma.com/proto/ULmOtappLI3cGhhjDEMXAQ/React-Portfolio?type=design" allowFullScreen  title='fig'></iframe> */}
               
-                  <img src="https://picsum.photos/200/300?random=1" alt="img" />
+                  {/* <img src="https://picsum.photos/200/300?random=1" alt="img" /> */}
               <span>
                 <h2>
                   Portfolio <i class="fa fa-link" aria-hidden="true"></i>

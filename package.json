@@ -11,8 +11,10 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "aos": "^2.3.4",
+    "autoprefixer": "^10.4.16",
     "bootstrap": "^5.3.2",
     "bootstrap-icons": "^1.11.2",
+    "emailjs-com": "^3.2.0",
     "react": "^18.2.0",
     "react-bootstrap": "^2.9.1",
     "react-bootstrap-icons": "^1.10.3",
@@ -21,6 +23,7 @@
     "react-router-dom": "^6.20.1",
     "react-scripts": "5.0.1",
     "react-spinners": "^0.13.8",
+    "tailwindcss": "^3.3.6",
     "vanta": "^0.5.24",
     "web-vitals": "^2.1.4"
   },
