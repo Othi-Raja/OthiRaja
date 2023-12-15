@@ -9,13 +9,15 @@ import Experience from './Components/Experience';
 import About from './Components/About';
 import Footer from './Components/Footer';
 import Figma from './Components/Figma';
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Navbar />
+    <ToastContainer/>
     <LandingPage/>
     <About/>
     <Figma/>
