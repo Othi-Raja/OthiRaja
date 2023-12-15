@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/OthiRaja/static/css/main.068e8c24.css",
-    "main.js": "/OthiRaja/static/js/main.87606843.js",
-    "static/js/787.124a14fd.chunk.js": "/OthiRaja/static/js/787.124a14fd.chunk.js",
+    "main.css": "/OthiRaja/static/css/main.66e36016.css",
+    "main.js": "/OthiRaja/static/js/main.9bc91436.js",
+    "static/js/651.e1f48b5f.chunk.js": "/OthiRaja/static/js/651.e1f48b5f.chunk.js",
     "index.html": "/OthiRaja/index.html",
-    "main.068e8c24.css.map": "/OthiRaja/static/css/main.068e8c24.css.map",
-    "main.87606843.js.map": "/OthiRaja/static/js/main.87606843.js.map",
-    "787.124a14fd.chunk.js.map": "/OthiRaja/static/js/787.124a14fd.chunk.js.map"
+    "main.66e36016.css.map": "/OthiRaja/static/css/main.66e36016.css.map",
+    "main.9bc91436.js.map": "/OthiRaja/static/js/main.9bc91436.js.map",
+    "651.e1f48b5f.chunk.js.map": "/OthiRaja/static/js/651.e1f48b5f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.068e8c24.css",
-    "static/js/main.87606843.js"
+    "static/css/main.66e36016.css",
+    "static/js/main.9bc91436.js"
   ]
 }
