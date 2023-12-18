@@ -66,6 +66,7 @@ input::selection{
   font-family: 'Kenia',serif;
   font-size: 3rem;
   font-weight: bold;
+  margin-left: 30px;
   text-decoration:underline;
  
 }
@@ -82,6 +83,7 @@ input::selection{
   text-decoration: none;
   color: rgb(0, 0, 0);
   margin: 0 1rem;
+  font-size: 20px;
   transition: color 0.3s ease;
 }
 
@@ -157,12 +159,12 @@ input::selection{
     transition: 2s;
   }
 }
-.logo {
+/* .logo {
   font-size: 2rem;
   font-weight: bold;
   text-decoration:underline;
   padding-left: 20px;
-}
+} */
 .am{
  
   font-size:large;

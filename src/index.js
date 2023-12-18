@@ -1,30 +1,31 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import Navbar from './Components/Navbar';
-import LandingPage from './Components/landingpage';
-import ContactForm from './Components/ContactForm';
-import reportWebVitals from './reportWebVitals';
-import Experience from './Components/Experience';
-import About from './Components/About';
-import Footer from './Components/Footer';
-import Figma from './Components/Figma';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import Navbar from "./Components/Navbar";
+import LandingPage from "./Components/landingpage";
+import ContactForm from "./Components/ContactForm";
+import reportWebVitals from "./reportWebVitals";
+import Experience from "./Components/Experience";
+import About from "./Components/About";
+import Footer from "./Components/Footer";
+// import Figma from './Components/Figma';
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import Networkerr from "./Components/error/Networkerr";
 
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <Navbar />
-    <ToastContainer/>
-    <LandingPage/>
-    <About/>
-    <Figma/>
-    <Experience/>
-     <ContactForm/>
-     <Footer/>
-      </React.StrictMode>
+    <Networkerr>
+      <Navbar />
+      <ToastContainer />
+      <LandingPage />
+      <About />
+      <Experience />
+      <ContactForm />
+      <Footer />
+    </Networkerr>
+  </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function
