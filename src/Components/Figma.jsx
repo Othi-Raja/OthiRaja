@@ -37,13 +37,10 @@ const Figma = () => {
               </h2>
             </div>
           </Col>
-          <Col md={4}>
-            <div
-              className="card"
-              data-aos="fade-in"
+          <Col md={4}  data-aos="fade-in"
               data-aos-duration="24000"
-              data-aos-easing="linear"
-            >
+              data-aos-easing="linear">
+            <div className="card">
               <div className="card-img card-img2"></div>
               <h2 className="figma-title">
                 Login Page
