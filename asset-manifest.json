@@ -1,15 +1,18 @@
 {
   "files": {
-    "main.css": "/OthiRaja/static/css/main.66e36016.css",
-    "main.js": "/OthiRaja/static/js/main.9bc91436.js",
+    "main.css": "/OthiRaja/static/css/main.81d2e23d.css",
+    "main.js": "/OthiRaja/static/js/main.da3fa5e8.js",
     "static/js/651.e1f48b5f.chunk.js": "/OthiRaja/static/js/651.e1f48b5f.chunk.js",
+    "static/media/pngwing.com.png": "/OthiRaja/static/media/pngwing.com.048431a93669e9e65fd4.png",
+    "static/media/fig-img2.png": "/OthiRaja/static/media/fig-img2.696dc5d7fc3be91fe9ca.png",
+    "static/media/no-wifi.png": "/OthiRaja/static/media/no-wifi.427b86cdfed3ad796cd0.png",
     "index.html": "/OthiRaja/index.html",
-    "main.66e36016.css.map": "/OthiRaja/static/css/main.66e36016.css.map",
-    "main.9bc91436.js.map": "/OthiRaja/static/js/main.9bc91436.js.map",
+    "main.81d2e23d.css.map": "/OthiRaja/static/css/main.81d2e23d.css.map",
+    "main.da3fa5e8.js.map": "/OthiRaja/static/js/main.da3fa5e8.js.map",
     "651.e1f48b5f.chunk.js.map": "/OthiRaja/static/js/651.e1f48b5f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.66e36016.css",
-    "static/js/main.9bc91436.js"
+    "static/css/main.81d2e23d.css",
+    "static/js/main.da3fa5e8.js"
   ]
 }
