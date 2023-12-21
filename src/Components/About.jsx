@@ -8,6 +8,7 @@ import { BarLoader } from "react-spinners";
 import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
 import Figma from "./Figma";
 import FrontEnd from "./Front_End";
+import Spline from '@splinetool/react-spline';
 
 const About = () => {
   const [showPopup, setShowPopup] = useState(false);
@@ -47,6 +48,7 @@ const About = () => {
     <div>
       <BrowserRouter>
         <Container>
+        <Spline id="Spline" scene="https://prod.spline.design/kQngrCjR7ZUwxw38/scene.splinecode" style={{ borderRadius: '8px', overflow: 'hidden' }} />
           <div className="about">
             <h4 data-aos="fade-up"> About</h4>
             <Row></Row>
