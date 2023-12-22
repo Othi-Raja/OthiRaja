@@ -4,19 +4,40 @@ import "w3-css";
 import React, { useEffect } from "react";
 import AOS from "aos";
 import { Col, Container, Row } from "react-bootstrap";
+import anime from 'animejs';
 const Figma = () => {
   useEffect(() => {
+    var textWrapper = document.querySelector('.ml12');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+anime.timeline({loop: true})
+  .add({
+    targets: '.ml12 .letter',
+    translateX: [40,0],
+    translateZ: 0,
+    opacity: [0,1],
+    easing: "easeOutExpo",
+    duration: 1000,
+    delay: (el, i) => 500 + 30 * i
+  }).add({
+    targets: '.ml12 .letter',
+    translateX: [0,-30],
+    opacity: [1,0],
+    easing: "easeInExpo",
+    duration: 1100,
+    delay: (el, i) => 100 + 30 * i
+  });
     AOS.init();
   }, []);
   return (
     <div>
       <Container className="figma_container">
-        <h2 className="text-center py-4">My Designs in Figma</h2>
+        <h2 data-aos="" className="text-center py-4 ml12">My Designs in Figma</h2>
         <Row>
           <Col
             md={4}
-            data-aos="fade-in"
-            data-aos-duration="22000"
+            data-aos="fade-up"
+            data-aos-delay="300"
             data-aos-easing="linear"
           >
             <div className="card">
@@ -37,8 +58,8 @@ const Figma = () => {
               </h2>
             </div>
           </Col>
-          <Col md={4}  data-aos="fade-in"
-              data-aos-duration="24000"
+          <Col md={4}  data-aos="fade-up"
+              data-aos-delay="600"
               data-aos-easing="linear">
             <div className="card">
               <div className="card-img card-img2"></div>
@@ -58,7 +79,7 @@ const Figma = () => {
               </h2>
             </div>
           </Col>
-          <Col md={4} data-aos="fade-in" data-aos-duration="26000">
+          <Col md={4}  data-aos="fade-up"  data-aos-delay="800">
             <div className="card">
               <div className="card-img "></div>
               <h2 className="figma-title">Portfolio</h2>

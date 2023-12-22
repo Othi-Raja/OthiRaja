@@ -4,13 +4,17 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import "bootstrap/dist/css/bootstrap.css";
 import "./App.css";
+// import { Audio } from 'react-loader-spinner'
 import { BarLoader } from "react-spinners";
 import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
 import Figma from "./Figma";
 import FrontEnd from "./Front_End";
 import Spline from '@splinetool/react-spline';
+import Skeleton from '@mui/material/Skeleton';
+import Box from '@mui/material/Box';
 
 const About = () => {
+  const [loadingSpline, setLoadingSpline] = useState(true);
   const [showPopup, setShowPopup] = useState(false);
 
   const openPopup = () => {
@@ -35,11 +39,15 @@ const About = () => {
 
     document.body.removeChild(link);
   };
-  const [loadingResume, setLoading] = useState(true);
+  // const [loadingResume, setLoading] = useState(true);
   useEffect(() => {
+    // setTimeout(() => {
+    //   setLoading(false);
+    // });
     setTimeout(() => {
-      setLoading(false);
-    });
+      setLoadingSpline(false);
+       
+    }, 5000);
 
     AOS.init();
   }, []);
@@ -48,7 +56,6 @@ const About = () => {
     <div>
       <BrowserRouter>
         <Container>
-        <Spline id="Spline" scene="https://prod.spline.design/kQngrCjR7ZUwxw38/scene.splinecode" style={{ borderRadius: '8px', overflow: 'hidden' }} />
           <div className="about">
             <h4 data-aos="fade-up"> About</h4>
             <Row></Row>
@@ -57,7 +64,7 @@ const About = () => {
             </h3>
             <Row>
               <Col sm={6}>
-                <p className="ab-cont" data-aos="fade-up">
+                <p className="ab-cont" data-aos="fade-up" style={{textShadow: 'black 2px'}}>
                   Passionate UI and web developer with a keen eye for elegant
                   design and a knack for crafting seamless, user-centric digital
                   experiences
@@ -99,13 +106,13 @@ const About = () => {
                       Front-End
                     </button>
                   </Link>
-                  <button
+                  {/* <button
                     className="button-50 button-ex"
                     data-aos="zoom-in"
                     data-aos-duration="2900"
                   >
                     Excel
-                  </button>
+                  </button> */}
                 </div>
               </Col>
             </Row>
@@ -121,11 +128,6 @@ const About = () => {
               <Modal.Title> Resume</Modal.Title>
             </Modal.Header>
             <Modal.Body>
-              {loadingResume ? (
-                <div className="text-center">
-                  <BarLoader color={"#36D7B7"} loading={loadingResume} />
-                </div>
-              ) : (
                 <div
                   style={{
                     position: "relative",
@@ -158,17 +160,32 @@ const About = () => {
                     allow="fullscreen"
                   />
                 </div>
-              )}
             </Modal.Body>
             <Modal.Footer>
               <Button variant="secondary" onClick={closePopup}>
                 Close
               </Button>
-              <Button variant="primary" onClick={downloadResume}>
+              <Button variant="primary" onClick={downloadResume}download>
+             
                 Download Resume
               </Button>
             </Modal.Footer>
           </Modal>
+        
+          {loadingSpline ? (
+            <Box sx={{ width:'100%' }}>
+              <Skeleton />
+              <Skeleton animation="wave" />
+              <Skeleton animation={false} />
+            </Box>
+          ) : (
+            <Spline
+              className="spline-loader"
+              id="Spline"
+              scene="https://prod.spline.design/kQngrCjR7ZUwxw38/scene.splinecode"
+              style={{ borderRadius: '8px', overflow: 'hidden', boxShadow: '0 0 40px rgba(73, 73, 73, 0.5)'}}/>
+          )}
+          
         </Container>
       </BrowserRouter>
     </div>
