@@ -173,7 +173,7 @@ const About = () => {
           </Modal>
 
           {loadingSpline ? (
-            <Box sx={{ width: '100%' }}>
+            <Box sx={{ width: '100%',marginBottom:'30px' }}>
               <Skeleton />
               <Skeleton animation="wave" />
               <Skeleton animation={false} />
@@ -183,7 +183,7 @@ const About = () => {
               className="spline-loader"
               id="Spline"
               scene="https://prod.spline.design/kQngrCjR7ZUwxw38/scene.splinecode"
-              style={{ borderRadius: '8px', overflow: 'hidden', boxShadow: '0 0 40px rgba(73, 73, 73, 0.5)' }} />
+              style={{ borderRadius: '8px', overflow: 'hidden', boxShadow: '0 0 40px rgba(73, 73, 73, 0.5)',marginBottom:'30px'}} />
           )}
 
         </Container>

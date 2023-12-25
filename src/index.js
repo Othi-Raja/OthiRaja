@@ -5,7 +5,6 @@ import Navbar from "./Components/Navbar";
 import LandingPage from "./Components/landingpage";
 import ContactForm from "./Components/ContactForm";
 import reportWebVitals from "./reportWebVitals";
-import Experience from "./Components/Experience";
 import About from "./Components/About";
 import Footer from "./Components/Footer";
 // import Figma from './Components/Figma';
@@ -21,7 +20,6 @@ root.render(
       <ToastContainer />
       <LandingPage />
       <About />
-      <Experience />
       <ContactForm />
       <Footer />
     </Networkerr>
