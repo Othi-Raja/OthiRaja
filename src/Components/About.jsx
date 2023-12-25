@@ -5,7 +5,7 @@ import "aos/dist/aos.css";
 import "bootstrap/dist/css/bootstrap.css";
 import "./App.css";
 // import { Audio } from 'react-loader-spinner'
-import { BarLoader } from "react-spinners";
+// import { BarLoader } from "react-spinners";
 import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
 import Figma from "./Figma";
 import FrontEnd from "./Front_End";
@@ -26,12 +26,12 @@ const About = () => {
   };
 
   const downloadResume = () => {
-    const fileUrl = "../icon/othiraja.pdf";
+    const fileUrl = "/public/othiraja.pdf";
 
     const link = document.createElement("a");
     link.href = fileUrl;
 
-    link.download = "../icon/othiraja.pdf";
+    link.download = "/public/othiraja.pdf";
 
     document.body.appendChild(link);
 
@@ -46,8 +46,8 @@ const About = () => {
     // });
     setTimeout(() => {
       setLoadingSpline(false);
-       
-    }, 5000);
+
+    }, 3000);
 
     AOS.init();
   }, []);
@@ -64,7 +64,7 @@ const About = () => {
             </h3>
             <Row>
               <Col sm={6}>
-                <p className="ab-cont" data-aos="fade-up" style={{textShadow: 'black 2px'}}>
+                <p className="ab-cont" data-aos="fade-up" style={{ textShadow: 'black 2px' }}>
                   Passionate UI and web developer with a keen eye for elegant
                   design and a knack for crafting seamless, user-centric digital
                   experiences
@@ -128,52 +128,52 @@ const About = () => {
               <Modal.Title> Resume</Modal.Title>
             </Modal.Header>
             <Modal.Body>
-                <div
+              <div
+                style={{
+                  position: "relative",
+                  width: "100%",
+                  height: 0,
+                  paddingTop: "129.4118%",
+                  paddingBottom: 0,
+                  boxShadow: "0 2px 8px 0 rgba(63, 69, 81, 0.16)",
+                  marginTop: "1.6em",
+                  marginBottom: "0.9em",
+                  overflow: "hidden",
+                  borderRadius: "8px",
+                  willChange: "transform",
+                }}
+              >
+                <iframe
+                  title="UniqueTitleForIframe"
                   style={{
-                    position: "relative",
+                    position: "absolute",
                     width: "100%",
-                    height: 0,
-                    paddingTop: "129.4118%",
-                    paddingBottom: 0,
-                    boxShadow: "0 2px 8px 0 rgba(63, 69, 81, 0.16)",
-                    marginTop: "1.6em",
-                    marginBottom: "0.9em",
-                    overflow: "hidden",
-                    borderRadius: "8px",
-                    willChange: "transform",
+                    height: "100%",
+                    top: 0,
+                    left: 0,
+                    border: "none",
+                    padding: 0,
+                    margin: 0,
                   }}
-                >
-                  <iframe
-                    title="UniqueTitleForIframe"
-                    style={{
-                      position: "absolute",
-                      width: "100%",
-                      height: "100%",
-                      top: 0,
-                      left: 0,
-                      border: "none",
-                      padding: 0,
-                      margin: 0,
-                    }}
-                    src="https://www.canva.com/design/DAF0cDxrFUo/view?embed"
-                    allowFullScreen
-                    allow="fullscreen"
-                  />
-                </div>
+                  src="https://www.canva.com/design/DAF0cDxrFUo/view?embed"
+                  allowFullScreen
+                  allow="fullscreen"
+                />
+              </div>
             </Modal.Body>
             <Modal.Footer>
               <Button variant="secondary" onClick={closePopup}>
                 Close
               </Button>
-              <Button variant="primary" onClick={downloadResume}download>
-             
+              <Button variant="primary" onClick={downloadResume} download>
+
                 Download Resume
               </Button>
             </Modal.Footer>
           </Modal>
-        
+
           {loadingSpline ? (
-            <Box sx={{ width:'100%' }}>
+            <Box sx={{ width: '100%' }}>
               <Skeleton />
               <Skeleton animation="wave" />
               <Skeleton animation={false} />
@@ -183,9 +183,9 @@ const About = () => {
               className="spline-loader"
               id="Spline"
               scene="https://prod.spline.design/kQngrCjR7ZUwxw38/scene.splinecode"
-              style={{ borderRadius: '8px', overflow: 'hidden', boxShadow: '0 0 40px rgba(73, 73, 73, 0.5)'}}/>
+              style={{ borderRadius: '8px', overflow: 'hidden', boxShadow: '0 0 40px rgba(73, 73, 73, 0.5)' }} />
           )}
-          
+
         </Container>
       </BrowserRouter>
     </div>
