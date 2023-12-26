@@ -91,7 +91,7 @@ const About = () => {
                     <button
                       className="button-50"
                       data-aos="zoom-in"
-                      data-aos-duration="26000"
+                      
                     >
                       Figma
                     </button>
@@ -101,7 +101,7 @@ const About = () => {
                     <button
                       className="button-50"
                       data-aos="zoom-in"
-                      data-aos-duration="28000"
+                      
                     >
                       Front-End
                     </button>

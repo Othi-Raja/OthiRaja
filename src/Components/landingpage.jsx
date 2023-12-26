@@ -18,7 +18,7 @@ const LandingPage = () => {
           <Col
             sm={6}
             className="Home-font-bg"
-            data-aos="fade-right"
+            data-aos="fade-in"
             data-aos-duration="1000"
             data-aos-easing="ease-in-sine"
           >
@@ -35,7 +35,7 @@ const LandingPage = () => {
             </div>
           </Col>
 
-          <Col sm={6} data-aos="fade-left" data-aos-duration="1100">
+          <Col sm={6} data-aos="fade-in" data-aos-duration="1100">
             {/* <video
             src="https://cdn.sanity.io/files/599r6htc/localized/ab4fa4eb170518f551d82cad01557e91952840a1.mp4"
             autoPlay
