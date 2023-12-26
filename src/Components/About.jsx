@@ -81,8 +81,7 @@ const About = () => {
                 <div className="skill-btn">
                   <button
                     className="button-50"
-                    data-aos="zoom-in"
-                    data-aos-duration="22000"
+                    data-aos="zoom-in" 
                     data-aos-easing="linear"
                   >
                     Python
@@ -90,8 +89,7 @@ const About = () => {
                   <Link to="/Figma">
                     <button
                       className="button-50"
-                      data-aos="zoom-in"
-                      
+                      data-aos="zoom-in" 
                     >
                       Figma
                     </button>
@@ -100,8 +98,7 @@ const About = () => {
                   <Link to="/FrontEndwork">
                     <button
                       className="button-50"
-                      data-aos="zoom-in"
-                      
+                      data-aos="zoom-in" 
                     >
                       Front-End
                     </button>
