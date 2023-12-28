@@ -50,6 +50,14 @@ input::selection {
   padding: 1rem;
   background-color: #ffffffcf;
   color: rgb(0, 0, 0);
+  border-bottom: .9px solid #eaeaea;
+  cursor: pointer;
+}
+nav{
+  position: fixed;
+}
+#link{
+  cursor: pointer;
 }
 .logo {
   font-family: 'Kenia', serif;
@@ -72,8 +80,12 @@ input::selection {
   font-size: 20px;
   transition: color 0.3s ease;
 }
-.nav-list a:hover {
+.nav-list #link:hover {
   color: #fa9f01;
+}
+#link:active{
+  border-bottom: 1px solid orange;
+  transform-origin: 50% 50%;
 }
 .mobile-menu {
   display: none;

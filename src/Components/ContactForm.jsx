@@ -93,7 +93,7 @@ const ContactForm = () => {
   }
 
   return (
-    <div className="contact-form-container">
+    <div className="contact-form-container contact">
       <Container className="form_glass">
         <Row className="top_form">
           <Col md={{ span: 6, offset: 3 }}>
