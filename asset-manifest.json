@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/OthiRaja/static/css/main.c36b6d4f.css",
-    "main.js": "/OthiRaja/static/js/main.06e74489.js",
+    "main.css": "/OthiRaja/static/css/main.d4c9c621.css",
+    "main.js": "/OthiRaja/static/js/main.0e605768.js",
     "static/js/796.3f9989fb.chunk.js": "/OthiRaja/static/js/796.3f9989fb.chunk.js",
     "static/js/493.e6fbcf31.chunk.js": "/OthiRaja/static/js/493.e6fbcf31.chunk.js",
     "static/js/618.2d109922.chunk.js": "/OthiRaja/static/js/618.2d109922.chunk.js",
@@ -12,10 +12,9 @@
     "static/media/pngwing.com.png": "/OthiRaja/static/media/pngwing.com.048431a93669e9e65fd4.png",
     "static/media/fig-img2.png": "/OthiRaja/static/media/fig-img2.696dc5d7fc3be91fe9ca.png",
     "static/media/instagram.webp": "/OthiRaja/static/media/instagram.55ba55f317d9810fc4b6.webp",
-    "static/media/no-wifi.png": "/OthiRaja/static/media/no-wifi.427b86cdfed3ad796cd0.png",
     "index.html": "/OthiRaja/index.html",
-    "main.c36b6d4f.css.map": "/OthiRaja/static/css/main.c36b6d4f.css.map",
-    "main.06e74489.js.map": "/OthiRaja/static/js/main.06e74489.js.map",
+    "main.d4c9c621.css.map": "/OthiRaja/static/css/main.d4c9c621.css.map",
+    "main.0e605768.js.map": "/OthiRaja/static/js/main.0e605768.js.map",
     "796.3f9989fb.chunk.js.map": "/OthiRaja/static/js/796.3f9989fb.chunk.js.map",
     "493.e6fbcf31.chunk.js.map": "/OthiRaja/static/js/493.e6fbcf31.chunk.js.map",
     "618.2d109922.chunk.js.map": "/OthiRaja/static/js/618.2d109922.chunk.js.map",
@@ -25,7 +24,7 @@
     "651.e1f48b5f.chunk.js.map": "/OthiRaja/static/js/651.e1f48b5f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c36b6d4f.css",
-    "static/js/main.06e74489.js"
+    "static/css/main.d4c9c621.css",
+    "static/js/main.0e605768.js"
   ]
 }
