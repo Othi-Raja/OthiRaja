@@ -66,6 +66,10 @@ nav{
   margin-left: 30px;
   text-decoration: underline;
 }
+.loader{
+  z-index: 55;
+   
+}
 .nav-list {
   display: flex;
   list-style: none;
