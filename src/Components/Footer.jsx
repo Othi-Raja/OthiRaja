@@ -1,33 +1,62 @@
 import React from 'react';
-import { FaInstagram, FaFacebook, FaLinkedin, FaGithub } from 'react-icons/fa';
+import { FaInstagram, FaFacebook, FaLinkedin, FaGithub, FaPhone } from 'react-icons/fa';
+import "./Footer.css";
+
+const socialMediaLinks = {
+  instagram: () => window.open('https://www.instagram.com/', '_blank'),
+  facebook: () => window.open('https://www.facebook.com/', '_blank'),
+  linkedin: () => window.open('https://www.linkedin.com/in/othi-raja-45176b255/', '_blank'),
+  github: () => window.open('https://github.com/Othi-Raja', '_blank'),
+  phone: () => window.open('tel:+91 8825722455', '_blank'),
+};
 
 const Footer = () => {
   return (
-    <footer style={{ backgroundColor: ' rgb(206, 206, 228)', color: 'white', padding: '20px 0', textAlign: 'center' }}>
+    <footer style={{ backgroundColor: 'white', color: 'white', padding: '20px 0', textAlign: 'center' }}>
       <div>
         {/* Instagram */}
-        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
-          <FaInstagram size={30} style={{ color: 'black', margin: '0 10px' }} />
-        </a>
+        <FaInstagram
+          id='linkedHover'
+          size={30}
+          style={{ color: 'black', margin: '20px 30px', cursor: 'pointer' }}
+          onClick={socialMediaLinks.instagram}
+        />
 
         {/* Facebook */}
-        <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
-          <FaFacebook size={30} style={{ color: 'black', margin: '0 10px' }} />
-        </a>
+        <FaFacebook
+          id='linkedHover'
+          size={30}
+          style={{ color: 'black', margin: '20px 30px', cursor: 'pointer' }}
+          onClick={socialMediaLinks.facebook}
+        />
 
         {/* LinkedIn */}
-        <a href="https://www.linkedin.com/in/othi-raja-45176b255/" target="_blank" rel="noopener noreferrer">
-          <FaLinkedin size={30} style={{ color: 'black', margin: '0 10px' }} />
-        </a>
+        <FaLinkedin
+          id='linkedHover'
+          size={30}
+          style={{ color: 'black', margin: '20px 30px', cursor: 'pointer' }}
+          onClick={socialMediaLinks.linkedin}
+        />
 
         {/* GitHub */}
-        <a href="https://github.com/Othi-Raja" target="_blank" rel="noopener noreferrer">
-          <FaGithub size={30} style={{ color: 'black', margin: '0 10px' }} />
-        </a>
+        <FaGithub
+          id='linkedHover'
+          size={30}
+          style={{ color: 'black', margin: '20px 30px', cursor: 'pointer' }}
+          onClick={socialMediaLinks.github}
+        />
+
+        {/* Phone */}
+        <FaPhone
+          id='linkedHover'
+          size={30}
+          style={{ color: 'black', margin: '20px 30px', cursor: 'pointer' }}
+          onClick={socialMediaLinks.phone}
+        />
       </div>
 
       {/* Copyright */}
-      <p style={{ color: 'gray', margin: '10px 0' }}>Copyright © 2023 Othiraja</p>
+      <p style={{ color: 'gray', margin: '10px 0', fontSize: '10px' }}>Copyright © 2023 Othiraja</p>
     </footer>
   );
 };

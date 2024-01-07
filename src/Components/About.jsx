@@ -180,7 +180,7 @@ const About = () => {
               className="spline-loader"
               id="Spline"
               scene="https://prod.spline.design/kQngrCjR7ZUwxw38/scene.splinecode"
-              style={{ borderRadius: '8px', overflow: 'hidden', boxShadow: '0 0 40px rgba(73, 73, 73, 0.5)',marginBottom:'30px'}} />
+              style={{ borderRadius: '8px', overflow: 'hidden', boxShadow: '0 0 20px rgba(73, 73, 73, 0.2)',marginBottom:'30px',backgroundColor:'#BED4D7'}} />
           )}
 
         </Container>
