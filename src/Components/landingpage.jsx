@@ -13,7 +13,7 @@ const LandingPage = () => {
 
   return (
     <div>
-      <Container>
+      <Container id="home" className="home">
         <Row style={{ marginTop: 20 }}>
           <Col
             sm={6}

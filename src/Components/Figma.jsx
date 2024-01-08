@@ -4,40 +4,40 @@ import "w3-css";
 import React, { useEffect } from "react";
 import AOS from "aos";
 import { Col, Container, Row } from "react-bootstrap";
-import anime from 'animejs';
+// import anime from 'animejs';
 const Figma = () => {
   useEffect(() => {
     let link = document.querySelector('.link')
-    link.addEventListener('click',function(){
-      var url="https://www.figma.com/proto/ULmOtappLI3cGhhjDEMXAQ/React-Portfolio?type=design&node-id=190-24&t=fLAp59l5IhkTWoxq-1&scaling=scale-down&page-id=0%3A1&mode=design"
-      window.open(url,'_blank')
+    link.addEventListener('click', function () {
+      var url = "https://www.figma.com/proto/ULmOtappLI3cGhhjDEMXAQ/React-Portfolio?type=design&node-id=190-24&t=fLAp59l5IhkTWoxq-1&scaling=scale-down&page-id=0%3A1&mode=design"
+      window.open(url, '_blank')
     })
-    var textWrapper = document.querySelector('.ml12');
-textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+    //     var textWrapper = document.querySelector('.ml12');
+    // textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 
-anime.timeline({loop: true})
-  .add({
-    targets: '.ml12 .letter',
-    translateX: [40,0],
-    translateZ: 0,
-    opacity: [0,1],
-    easing: "easeOutExpo",
-    duration: 1000,
-    delay: (el, i) => 500 + 30 * i
-  }).add({
-    targets: '.ml12 .letter',
-    translateX: [0,-30],
-    opacity: [1,0],
-    easing: "easeInExpo",
-    duration: 1100,
-    delay: (el, i) => 100 + 30 * i
-  });
+    // anime.timeline({loop: true})
+    //   .add({
+    //     targets: '.ml12 .letter',
+    //     translateX: [40,0],
+    //     translateZ: 0,
+    //     opacity: [0,1],
+    //     easing: "easeOutExpo",
+    //     duration: 1000,
+    //     delay: (el, i) => 500 + 30 * i
+    //   }).add({
+    //     targets: '.ml12 .letter',
+    //     translateX: [0,-30],
+    //     opacity: [1,0],
+    //     easing: "easeInExpo",
+    //     duration: 1100,
+    //     delay: (el, i) => 100 + 30 * i
+    //   });
     AOS.init();
   }, []);
   return (
     <div>
       <Container className="figma_container">
-        <h2 data-aos="" className="text-center py-4 ml12">My Designs in Figma</h2>
+        {/* <h2 data-aos="" className="text-center py-4 ml12">My Designs in Figma</h2> */}
         <Row>
           <Col
             md={4}
@@ -64,14 +64,14 @@ anime.timeline({loop: true})
               </h2>
             </div>
           </Col>
-          <Col md={4}  data-aos="fade-up"
-              data-aos-delay="600"
-              data-aos-easing="linear">
-                {/* card--2 */}
+          <Col md={4} data-aos="fade-up"
+            data-aos-delay="600"
+            data-aos-easing="linear">
+            {/* card--2 */}
             <div className="card">
               <div className="card-img card-img2"></div>
               <h2 className="figma-title">
-              Coming Soon
+                Coming Soon
                 {/* <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="28"
@@ -86,11 +86,11 @@ anime.timeline({loop: true})
               </h2>
             </div>
           </Col>
-          <Col md={4}  data-aos="fade-up"  data-aos-delay="800">
+          <Col md={4} data-aos="fade-up" data-aos-delay="800">
             {/* card--3 */}
             <div className="card">
               <div className="card-img card-img3"></div>
-              <h2 className="figma-title" style={{color:"gray"}}>Coming Soon</h2>
+              <h2 className="figma-title" style={{ color: "gray" }}>Coming Soon</h2>
             </div>
           </Col>
         </Row>

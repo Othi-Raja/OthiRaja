@@ -26,18 +26,13 @@ const About = () => {
   };
 
   const downloadResume = () => {
-    const fileUrl = "/public/othiraja.pdf";
-
-    const link = document.createElement("a");
-    link.href = fileUrl;
-
-    link.download = "/public/othiraja.pdf";
-
-    document.body.appendChild(link);
-
-    link.click();
-
-    document.body.removeChild(link);
+    const pdfUrl = "Resume-othiraja.png";
+        const link = document.createElement("a");
+        link.href = pdfUrl;
+        link.download = "Resume-othiraja.png"; // specify the filename
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
   };
   // const [loadingResume, setLoading] = useState(true);
   useEffect(() => {
@@ -55,7 +50,7 @@ const About = () => {
   return (
     <div>
       <BrowserRouter>
-        <Container>
+        <Container className="About" >
           <div className="about">
             <h4 data-aos="fade-up"> About</h4>
             <Row></Row>
@@ -81,7 +76,7 @@ const About = () => {
                 <div className="skill-btn">
                   <button
                     className="button-50"
-                    data-aos="zoom-in" 
+                    data-aos="zoom-in"
                     data-aos-easing="linear"
                   >
                     Python
@@ -89,7 +84,7 @@ const About = () => {
                   <Link to="/Figma">
                     <button
                       className="button-50"
-                      data-aos="zoom-in" 
+                      data-aos="zoom-in"
                     >
                       Figma
                     </button>
@@ -98,7 +93,7 @@ const About = () => {
                   <Link to="/FrontEndwork">
                     <button
                       className="button-50"
-                      data-aos="zoom-in" 
+                      data-aos="zoom-in"
                     >
                       Front-End
                     </button>
@@ -163,14 +158,13 @@ const About = () => {
                 Close
               </Button>
               <Button variant="primary" onClick={downloadResume} download>
-
-                Download Resume
+                Download Resume 
               </Button>
             </Modal.Footer>
           </Modal>
 
           {loadingSpline ? (
-            <Box sx={{ width: '100%',marginBottom:'30px' }}>
+            <Box sx={{ width: '100%', marginBottom: '30px' }}>
               <Skeleton />
               <Skeleton animation="wave" />
               <Skeleton animation={false} />
@@ -180,7 +174,7 @@ const About = () => {
               className="spline-loader"
               id="Spline"
               scene="https://prod.spline.design/kQngrCjR7ZUwxw38/scene.splinecode"
-              style={{ borderRadius: '8px', overflow: 'hidden', boxShadow: '0 0 20px rgba(73, 73, 73, 0.2)',marginBottom:'30px',backgroundColor:'#BED4D7'}} />
+              style={{ borderRadius: '8px', overflow: 'hidden', boxShadow: '0 0 20px rgba(73, 73, 73, 0.2)', marginBottom: '60px', backgroundColor: '#BED4D7' }} />
           )}
 
         </Container>

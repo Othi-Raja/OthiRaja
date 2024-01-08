@@ -6,6 +6,10 @@
   margin-bottom: 30px;
 }
 
+#submit {
+  margin-bottom: 20px;
+}
+
 .form_glass {
   /* From https://css.glass */
   background: rgba(255, 255, 255, 0);

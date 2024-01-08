@@ -10,6 +10,7 @@ import Footer from "./Components/Footer";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Networkerr from "./Components/error/Networkerr";
+// import  Project  from "./Components/Projects";
 
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -20,6 +21,7 @@ root.render(
       <ToastContainer />
       <LandingPage />
       <About />
+      {/* <Project/> */}
       <ContactForm />
       <Footer />
   </React.StrictMode>
