@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/OthiRaja/static/css/main.3666f316.css",
-    "main.js": "/OthiRaja/static/js/main.a85f2cd5.js",
+    "main.css": "/OthiRaja/static/css/main.bb0a5a66.css",
+    "main.js": "/OthiRaja/static/js/main.ef357414.js",
     "static/js/796.3f9989fb.chunk.js": "/OthiRaja/static/js/796.3f9989fb.chunk.js",
     "static/js/493.e6fbcf31.chunk.js": "/OthiRaja/static/js/493.e6fbcf31.chunk.js",
     "static/js/618.2d109922.chunk.js": "/OthiRaja/static/js/618.2d109922.chunk.js",
@@ -13,8 +13,8 @@
     "static/media/fig-img2.png": "/OthiRaja/static/media/fig-img2.696dc5d7fc3be91fe9ca.png",
     "static/media/instagram.webp": "/OthiRaja/static/media/instagram.55ba55f317d9810fc4b6.webp",
     "index.html": "/OthiRaja/index.html",
-    "main.3666f316.css.map": "/OthiRaja/static/css/main.3666f316.css.map",
-    "main.a85f2cd5.js.map": "/OthiRaja/static/js/main.a85f2cd5.js.map",
+    "main.bb0a5a66.css.map": "/OthiRaja/static/css/main.bb0a5a66.css.map",
+    "main.ef357414.js.map": "/OthiRaja/static/js/main.ef357414.js.map",
     "796.3f9989fb.chunk.js.map": "/OthiRaja/static/js/796.3f9989fb.chunk.js.map",
     "493.e6fbcf31.chunk.js.map": "/OthiRaja/static/js/493.e6fbcf31.chunk.js.map",
     "618.2d109922.chunk.js.map": "/OthiRaja/static/js/618.2d109922.chunk.js.map",
@@ -24,7 +24,7 @@
     "651.e1f48b5f.chunk.js.map": "/OthiRaja/static/js/651.e1f48b5f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3666f316.css",
-    "static/js/main.a85f2cd5.js"
+    "static/css/main.bb0a5a66.css",
+    "static/js/main.ef357414.js"
   ]
 }
