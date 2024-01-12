@@ -53,17 +53,17 @@ const Navbar = () => {
         }} offset={-150} onClick={debouncedHandleLinkClick}>
           About
         </Link>
-        <Link to="projects" smooth={true} duration={500} spy={true} id="link click" activeClass="active-link" activeStyle={{
-          borderBottom: "2px solid orange",
-          color: "orange",
-        }} offset={-100} onClick={debouncedHandleLinkClick}>
-          Projects
-        </Link>
         <Link to="Contact" smooth={true} duration={500} spy={true} id="link" activeClass="active-link" activeStyle={{
           borderBottom: "2px solid orange",
           color: "orange",
         }} offset={-200} onClick={debouncedHandleLinkClick}>
           Contact
+        </Link>
+        <Link to="projects" smooth={true} duration={500} spy={true} id="link click" activeClass="active-link" activeStyle={{
+          borderBottom: "2px solid orange",
+          color: "orange",
+        }} offset={-100} onClick={debouncedHandleLinkClick}>
+          Projects
         </Link>
       </div>
       <div className="mobile-menu" onClick={() => setMobile(prevMobile => !prevMobile)}>

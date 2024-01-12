@@ -1,20 +1,13 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Front_end.css";
 import { Col, Container, Row } from "react-bootstrap";
+let url = {
+  codezilla:() => window.open('https://othi-raja.github.io/codezilla.org/','_blank'),
+  instagram_cloned: () => window.open('https://othi-raja.github.io/clone-instagram/','_blank'),
+  mrchef : () => window.open('https://othi-raja.github.io/Mr.chef-/','_blank')
+}
 const FrontEnd = () => {
-  useEffect(() => {
-    let link = document.querySelector('.codezila');
-    link.addEventListener('click', function () {
-      var url = "https://othi-raja.github.io/codezilla.org/";
-      window.open(url, '_blank');
-    })
-    let link2 = document.querySelector('.instaclone');
-    link2.addEventListener('click', function () {
-      var url = "https://othi-raja.github.io/clone-instagram/";
-      window.open(url, '_blank');
-    })
-  })
 
   return (
     <div>
@@ -28,7 +21,7 @@ const FrontEnd = () => {
             data-aos-easing="linear"
           >
             {/* card--1 */}
-            <div className="FE_card codezila ">
+            <div className="FE_card codezila " onClick={url.codezilla}>
               <div className="FE_card-img FE_card-img1 "></div>
               <h2 className="FE_figma-title">
                 Codezilla
@@ -49,11 +42,11 @@ const FrontEnd = () => {
           <Col
             md={4}
             data-aos="fade-up"
-            data-aos-delay="300"
+            data-aos-delay="600"
             data-aos-easing="linear"
           >
             {/* card--1 */}
-            <div className="FE_card instaclone">
+            <div className="FE_card instaclone" onClick={url.instagram_cloned}>
               <div className="FE_card-img FE_card-img2 "></div>
               <h2 className="FE_figma-title">
                 Instagram-clone
@@ -74,14 +67,14 @@ const FrontEnd = () => {
           <Col
             md={4}
             data-aos="fade-up"
-            data-aos-delay="300"
+            data-aos-delay="800"
             data-aos-easing="linear"
           >
             {/* card--1 */}
-            <div className="FE_card">
+            <div className="FE_card" onClick={url.mrchef}>
               <div className="FE_card-img FE_card-img3 "></div>
               <h2 className="FE_figma-title">
-                Portfolio
+                 Mr.Chef
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="28"
