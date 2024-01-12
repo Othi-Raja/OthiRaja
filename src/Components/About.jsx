@@ -12,6 +12,7 @@ import FrontEnd from "./Front_End";
 import Spline from '@splinetool/react-spline';
 import Skeleton from '@mui/material/Skeleton';
 import Box from '@mui/material/Box';
+import Python from "./Python";
 
 const About = () => {
   const [loadingSpline, setLoadingSpline] = useState(true);
@@ -74,6 +75,7 @@ const About = () => {
               </Col>
               <Col sm={6}>
                 <div className="skill-btn">
+                <Link to="/Python">
                   <button
                     className="button-50"
                     data-aos="zoom-in"
@@ -81,6 +83,7 @@ const About = () => {
                   >
                     Python
                   </button>
+                  </Link>
                   <Link to="/Figma">
                     <button
                       className="button-50"
@@ -112,6 +115,7 @@ const About = () => {
             <Routes>
               <Route path="/Figma" element={<Figma />} />
               <Route path="/FrontEndwork" element={<FrontEnd />} />
+              <Route path="/Python" element={<Python/>}/>
             </Routes>
           </div>
 
