@@ -28,13 +28,15 @@ const About = () => {
 
   const downloadResume = () => {
     const pdfUrl = "Resume-othiraja.png";
-        const link = document.createElement("a");
-        link.href = pdfUrl;
-        link.download = "Resume-othiraja.png"; // specify the filename
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-  };
+    const link = document.createElement("a");
+    link.href = pdfUrl;
+    link.download = "Resume-othiraja.png"; // specify the filename
+    link.rel = "noopener noreferrer"; // set rel attribute for security
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+};
+
   // const [loadingResume, setLoading] = useState(true);
   useEffect(() => {
     // setTimeout(() => {
