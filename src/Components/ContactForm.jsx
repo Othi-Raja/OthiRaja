@@ -106,15 +106,18 @@ const ContactForm = () => {
               >
                 <Form.Label>Name:</Form.Label>
                 <Form.Control
-                  type="text"
-                  placeholder="Enter your name"
-                  required
-                  className="input"
-                  value={formData.name}
-                  onChange={(e) =>
-                    setFormData({ ...formData, name: e.target.value })
-                  }
-                />
+  type="text" 
+  placeholder="Enter your name"
+  required
+  className="input"
+  pattern="^[A-Za-z]+$"
+  title="Please enter only letters"
+  value={formData.name}
+  onChange={(e) => {
+    const inputValue = e.target.value.replace(/[^A-Za-z]/g, ''); // Remove non-alphabetic characters
+    setFormData({ ...formData, name: inputValue });
+  }}
+/>
               </Form.Group>
 
               <Form.Group
