@@ -15,19 +15,15 @@ import Marquee from "react-fast-marquee";
 // import Skeleton from '@mui/material/Skeleton';
 // import Box from '@mui/material/Box';
 import Python from "./Python";
-
 const About = () => {
   // const [loadingSpline, setLoadingSpline] = useState(true);
   const [showPopup, setShowPopup] = useState(false);
-
   const openPopup = () => {
     setShowPopup(true);
   };
-
   const closePopup = () => {
     setShowPopup(false);
   };
-
   const downloadResume = () => {
     const pdfUrl = "Resume-othiraja.png";
     const link = document.createElement("a");
@@ -38,7 +34,6 @@ const About = () => {
     link.click();
     document.body.removeChild(link);
 };
-
   // const [loadingResume, setLoading] = useState(true);
   useEffect(() => {
     // setTimeout(() => {
@@ -46,12 +41,9 @@ const About = () => {
     // });
     // setTimeout(() => {
     //   setLoadingSpline(false);
-
     // }, 3000);
-
     AOS.init();
   }, []);
-
   return (
     <div>
       <BrowserRouter>
@@ -96,7 +88,6 @@ const About = () => {
                       Figma
                     </button>
                   </Link>
-
                   <Link to="/FrontEndwork">
                     <button
                       className="button-50"
@@ -113,18 +104,14 @@ const About = () => {
                     Excel
                   </button> */}
                 </div>
-             
               </Col>
             </Row>
-
             <Routes>
               <Route path="/Figma" element={<Figma />} />
               <Route path="/FrontEndwork" element={<FrontEnd />} />
               <Route path="/Python" element={<Python/>}/>
             </Routes>
           </div>
-       
-
           <Modal show={showPopup} onHide={closePopup}>
             <Modal.Header closeButton>
               <Modal.Title> Resume</Modal.Title>
@@ -186,15 +173,14 @@ const About = () => {
               scene="https://prod.spline.design/kQngrCjR7ZUwxw38/scene.splinecode"
               style={{ borderRadius: '8px', overflow: 'hidden', boxShadow: '0 0 20px rgba(73, 73, 73, 0.2)', marginBottom: '60px', backgroundColor: '#BED4D7' }} />
           )} */}
-
         </Container>
         <Row>
           <Marquee className="marquee" pauseOnHover pauseOnClick autoFill speed={10}>
-            <span className="marqueeElement pythonIcon"><FaPython  style={{ fontSize: '30px' }}></FaPython>&nbsp;Python</span>
-            <span className="marqueeElement vootstrapIcon"><FaBootstrap></FaBootstrap>&nbsp;Bootstrap</span>
-            <span className="marqueeElement figmaIcon"><FaFigma></FaFigma>&nbsp;Figma</span>
-            <span className="marqueeElement nadejsIcon"><FaNodeJs></FaNodeJs>&nbsp;Node.js</span>
-            <span className="marqueeElement "> <FaReact></FaReact>&nbsp;React</span>
+            <span className="marqueeElement"><FaPython  style={{ fontSize: '30px' }}></FaPython>&nbsp;Python</span>
+            <span className="marqueeElement"><FaBootstrap></FaBootstrap>&nbsp;Bootstrap</span>
+            <span className="marqueeElement"><FaFigma></FaFigma>&nbsp;Figma</span>
+            <span className="marqueeElement"><FaNodeJs></FaNodeJs>&nbsp;Node.js</span>
+            <span className="marqueeElement"> <FaReact></FaReact>&nbsp;React</span>
             <span className="marqueeElement"><FaHtml5></FaHtml5>&nbsp;HTML</span>
             <span className="marqueeElement"><FaCss3></FaCss3>&nbsp;CSS</span>
             <span className="marqueeElement"><FaJs></FaJs>&nbsp;JavaScript</span>

@@ -18,21 +18,17 @@
   cursor: pointer;
   background-color: rgba(203, 217, 233, 0.141);
 }
-
 .card:hover {
   transform: scale(1.04) translateY(-7px);
   transition: all .2s ease;
 }
-
 .figma-title {
   color: rgb(53, 53, 53);
   cursor: pointer;
 }
-
 .bi-link-45deg {
   color: rgb(74, 0, 0);
 }
-
 .card-img1 {
   background: url("../icon/pngwing.com.png");
   background-position: center;
@@ -47,7 +43,6 @@
   border: none;
   filter: blur(1px);
 }
-
 .card-img2 {
   background: url("../icon/fig-img2.png");
   background-position: center;
@@ -62,16 +57,13 @@
   border: none;
   filter: brightness(10%);
 }
-
 .card-img1:hover {
   transition: all cubic-bezier(0.47, 0, 0.745, 0.715);
   filter: blur(0px);
 }
-
 .card-img2:hover {
   filter: brightness(90%);
 }
-
 .card-img3 {
   background: url('https://img.freepik.com/free-vector/topographic-contour-lines-map-seamless-pattern_1284-52862.jpg?w=740&t=st=1703348228~exp=1703348828~hmac=5b3a5bf6dea53943ff45d1a0380df041a09d691b655bc21eb69c70abc854505e');
   background-position: center;
@@ -85,11 +77,9 @@
   box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.145);
   border: none;
 }
-
 .figma-title:hover {
   color: black;
 }
-
 .figma_container {
   width: 100%;
   height: auto;

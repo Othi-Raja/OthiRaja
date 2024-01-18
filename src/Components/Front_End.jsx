@@ -8,7 +8,6 @@ let url = {
   mrchef : () => window.open('https://othi-raja.github.io/Mr.chef-/','_blank')
 }
 const FrontEnd = () => {
-
   return (
     <div>
       <Container className="figma_container">

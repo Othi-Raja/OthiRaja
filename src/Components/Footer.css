@@ -9,30 +9,20 @@ footer{
 hr{
     color: orange;
 }
-
+.iconhover:hover{
+    color: orange;
+}
 #linkedHover:hover {
-
     animation: border 1s ease-out infinite;
 }
-
 @keyframes border {
     0% {
         border-bottom: 2px solid orange;
-
-
-
     }
-
     50% {
         border-bottom: 2px solid rgb(223, 198, 198);
-
-
     }
-
     100% {
         border-bottom: 2px solid orange;
-
-
-
     }
 }

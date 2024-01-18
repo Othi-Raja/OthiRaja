@@ -2,10 +2,7 @@ import React from 'react';
 import Figma from './Figma';
 import FrontEnd from './Front_End';
 import { Container } from "react-bootstrap";
-
-
 const Project = () => {
-
     return (
         <Container>
             <div ClassNames="Products">
@@ -16,8 +13,6 @@ const Project = () => {
                 <FrontEnd />
             </div>
         </Container>
-
     );
 }
-
 export default Project;

@@ -3,38 +3,30 @@ import {  Link, animateScroll as scroll } from "react-scroll";
 import AOS from "aos"; 
 import { debounce } from "lodash";
 import "./App.css"; // Import your CSS file for styling
-
 const Navbar = () => {
   const [isMobile, setMobile] = useState(false);
   const [isFixed, setFixed] = useState(false);
- 
   useEffect(() => {
     AOS.init();
-
     // Add a scroll event listener
     window.addEventListener("scroll", handleScroll);
-
     // Cleanup the event listener on component unmount
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
   const debouncedHandleLinkClick = debounce(() => {
     setMobile(false); // Close the mobile menu when a link is clicked
     AOS.refresh(); // Refresh AOS animations
   }, 50); // Adjust the debounce delay as needed
-
   const scrollToTop = () => {
     scroll.scrollToTop();
     debouncedHandleLinkClick();
   };
-
   const handleScroll = () => {
     // Add or remove the "fixed" class based on the scroll position
     setFixed(window.scrollY > 10);
   };
-
   return (
     <nav className={`navbar ${isFixed ? "fixed" : ""}`}>
       <div className="logo" onClick={scrollToTop}>
@@ -74,5 +66,4 @@ const Navbar = () => {
     </nav>
   );
 };
-
 export default Navbar;

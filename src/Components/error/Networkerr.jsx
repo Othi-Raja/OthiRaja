@@ -4,7 +4,6 @@ import '../App.css'
 import 'w3-css';
 const Networkerr = ({ children }) => {
   const [loading, setLoading] = useState(true);
-
   useEffect(() => {
     // Simulate an asynchronous operation (e.g., fetching data)
     const fetchData = async () => {
@@ -19,10 +18,8 @@ const Networkerr = ({ children }) => {
         setLoading(false);
       }
     };
-
     fetchData();
   }, []); // Run this effect only once on component mount
-
   return (
     <div className="loader">
       {loading ? (
@@ -35,5 +32,4 @@ const Networkerr = ({ children }) => {
     </div>
   );
 };
-
 export default Networkerr;

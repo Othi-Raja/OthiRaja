@@ -5,12 +5,10 @@ import { Container, Col, Row } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.css";
 import "./App.css"; // You can create this CSS file for styling
 import { Player } from "@lottiefiles/react-lottie-player";
-
 const LandingPage = () => {
   useEffect(() => {
     AOS.init();
   }, []);
-
   return (
     <div>
       <Container id="home" className="home">
@@ -34,7 +32,6 @@ const LandingPage = () => {
               </Col>
             </div>
           </Col>
-
           <Col sm={6} data-aos="fade-in" data-aos-duration="1100">
             {/* <video
             src="https://cdn.sanity.io/files/599r6htc/localized/ab4fa4eb170518f551d82cad01557e91952840a1.mp4"

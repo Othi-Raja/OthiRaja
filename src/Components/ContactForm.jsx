@@ -7,12 +7,10 @@ import "aos/dist/aos.css"; // smart animation & transition
 import emailjs from "emailjs-com";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css"; //Toastify for notification
-
 const ContactForm = () => {
   useEffect(() => {
     AOS.init();
   }, []);
-
   (function () {
     emailjs.init("VNTleMBW5RpUMxBDv");
   })();
@@ -49,15 +47,12 @@ const ContactForm = () => {
       },
     });
   };
-
   const [formSubmitted, setFormSubmitted] = useState(false);
-
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
   });
-
   const formsubmit = (e) => {
     e.preventDefault(); /// To stop window loading  when Form submit
     const currentFormData = {
@@ -65,7 +60,6 @@ const ContactForm = () => {
       email: document.getElementById("formEmail").value,
       message: document.getElementById("formMessage").value,
     };
-
     emailjs
       .send("service_1h6dhgl", "template_l30j0dj", currentFormData)
       .then((response) => {
@@ -85,13 +79,11 @@ const ContactForm = () => {
         notify_error(); // To show error notification
       });
   };
-
   // Check if the form has been submitted successfully
   if (formSubmitted) {
     // Reset the state to allow future submissions
     setFormSubmitted(false);
   }
-
   return (
     <div className="contact-form-container Contact">
       <Container className="form_glass">
@@ -119,7 +111,6 @@ const ContactForm = () => {
   }}
 />
               </Form.Group>
-
               <Form.Group
                 controlId="formEmail"
                 data-aos="fade-in"
@@ -138,7 +129,6 @@ const ContactForm = () => {
                   }
                 />
               </Form.Group>
-
               <Form.Group
                 controlId="formMessage"
                 data-aos="fade-in"
@@ -158,7 +148,6 @@ const ContactForm = () => {
                   }
                 />
               </Form.Group>
-
               <Button
                 id="submit"
                 type="submit"
@@ -189,5 +178,4 @@ const ContactForm = () => {
     </div>
   );
 };
-
 export default ContactForm;

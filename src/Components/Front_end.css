@@ -18,25 +18,20 @@
   cursor: pointer;
   background-color: rgba(203, 217, 233, 0.141);
 }
-
 .FE_card:hover {
   transform: scale(1.04) translateY(-7px);
   transition: all .2s ease;
 }
-
 .FE_figma-title {
   color: rgb(53, 53, 53);
   cursor: pointer;
 }
-
 .bi-link-45deg {
   color: rgb(118, 118, 118);
 }
-
 .bi-link-45deg:hover {
   color: rgb(0, 0, 0);
 }
-
 .FE_card-img1 {
   background: url("https://community.mozilla.org/wp-content/uploads/2021/04/Copy-of-Copy-of-Copy-of-Untitled-1.png");
   background-position: center;
@@ -51,12 +46,10 @@
   border: none;
   filter: blur(1px);
 }
-
 .FE_card-img1:hover {
   transition: all cubic-bezier(0.47, 0, 0.745, 0.715);
   filter: blur(0px);
 }
-
 .FE_card-img2 {
   background: url("../icon/instagram.webp");
   background-position: center;
@@ -72,12 +65,10 @@
   filter: brightness(50%);
   transition: all .9s ease;
 }
-
 .FE_card-img2:hover {
   filter: brightness(90%);
   transition: all 1s ease-out;
 }
-
 .FE_card-img3 {
   background: url('https://imgs.search.brave.com/BnGb2lVnBxjDg_jmRN6ua6m-Rj29qQnobUIHh--EW_4/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzdhL2Y5/L2I2LzdhZjliNjEx/ODEwYjE3MDYyZjNk/Y2I0NTVhZTVhZTZi/LmpwZw');
   background-position: center;
@@ -91,14 +82,11 @@
   box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.145);
   border: none;
 }
-
 .FE_figma-title:hover {
   color: black;
 }
-
 .FE_figma_container {
   width: 100%;
   height: auto;
   background-color: rgb(255, 255, 255);
-
 }
