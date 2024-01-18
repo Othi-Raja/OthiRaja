@@ -16,14 +16,18 @@ body {
 .css-0 {
   border-radius: 20px;
 }
+
 /* Add styles for the fixed navbar */
 .navbar.fixed {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: #fff; /* Set your desired background color for the fixed navbar */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add a box shadow for a subtle effect */
-  z-index: 1000; /* Make sure the navbar appears above other elements on the page */
+  background-color: #fff;
+  /* Set your desired background color for the fixed navbar */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  /* Optional: Add a box shadow for a subtle effect */
+  z-index: 1000;
+  /* Make sure the navbar appears above other elements on the page */
 }
 
 /* Add styles for the active link
@@ -31,23 +35,47 @@ body {
   transition: cubic-bezier(0.075, 0.82, 0.165, 1);
   font-weight:600;
   border-bottom: 1px solid red;
-     
 } */
-
-
-
 /* #Spline{
   margin-top: 10px;
   box-shadow: 0 0 40px rgba(73, 73, 73, 0.5);
   border-radius: 10px;
 } */
-
-
 /* .Home-font-bg{
   background: url("https://images.unsplash.com/photo-1605106715994-18d3fecffb98?q=80&w=1926&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
   background-position: center;
   background-size: cover;
 } */
+.marquee {
+margin: 40px 40px 40px 0px;
+border-top: .8px solid  rgba(249, 108, 0, 0.407) ;
+border-bottom: .2px solid  rgba(249, 108, 0, 0.416) ;
+padding-top: 30px;
+padding-bottom: 30px;
+
+}
+
+
+.marqueeElement {
+  font-size: large;
+  padding-right: 30px;
+  color: black;
+ 
+
+
+
+}
+.marqueeElement:hover{
+ /** TEXT GRADIENT */
+   color: #ee4beb;
+  background-image: -webkit-linear-gradient(0deg, #ee4beb 3%, #19b735 90%, #9a8f3f 35%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  text-fill-color: transparent;
+   -webkit-text-fill-color: transparent; 
+}
+
+
 .text-center {
   display: flex;
   justify-content: center;
@@ -98,7 +126,6 @@ nav {
 
 .loader {
   z-index: 55;
-
 }
 
 .nav-list {
@@ -120,7 +147,6 @@ nav {
 .nav-list #link:hover {
   color: #fa9f01;
 }
- 
 
 .mobile-menu {
   display: none;
@@ -139,6 +165,8 @@ nav {
 .about {
   margin-top: 60px;
   margin-bottom: 60px;
+  
+  
 }
 
 .Home-font {
@@ -158,32 +186,33 @@ nav {
   /* width: 60%; */
   animation: bgc 2s infinite linear;
   margin-bottom: 50px;
+  
 }
 
 @keyframes bgc {
   0% {
     filter: drop-shadow(20px 9px 89px black);
-    transition: 2s;
+    transition: 120s;
   }
 
   10% {
     filter: drop-shadow(20px 9px 89px rgb(129, 210, 237));
-    transition: 2s;
+    transition: 100s;
   }
 
   25% {
     filter: drop-shadow(20px 9px 89px rgb(11, 107, 46));
-    transition: 2s;
+    transition: 100s;
   }
 
   50% {
     filter: drop-shadow(20px 9px 60px rgb(255, 99, 99));
-    transition: 2s;
+    transition: 100s;
   }
 
   100% {
     filter: drop-shadow(20px 9px 89px rgb(114, 23, 97));
-    transition: 2s;
+    transition: 110s;
   }
 }
 
@@ -215,8 +244,8 @@ nav {
   font-weight: bold;
   color: gray;
   font-size: 2.3rem;
+  
   /* border-left: 2px solid salmon; */
-
 }
 
 /* CSS */
@@ -239,13 +268,11 @@ nav {
   touch-action: manipulation;
 margin-bottom: 10px;
 }
-
 .button-33:hover {
   box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
   transform: scale(1.05) rotate(-1deg);
   box-shadow:2px #000000;
 } */
-
 /* CSS */
 .button-50 {
   appearance: button;
@@ -322,7 +349,6 @@ margin-bottom: 10px;
   color: transparent;
   /* Hide the text on hover */
   color: #ffffff;
-
 }
 
 .button-50:not([disabled]):active {
@@ -452,7 +478,6 @@ margin-bottom: 10px;
 
 .nme>h1 {
   font-family: 'Poppins', sans-serif;
-
 }
 
 @media (max-width: 768px) {

@@ -4,18 +4,20 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import "bootstrap/dist/css/bootstrap.css";
 import "./App.css";
+import { FaReact,FaPython,FaBootstrap, FaFigma, FaNodeJs, FaHtml5, FaCss3, FaJs } from 'react-icons/fa';
 // import { Audio } from 'react-loader-spinner'
 // import { BarLoader } from "react-spinners";
 import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
 import Figma from "./Figma";
 import FrontEnd from "./Front_End";
-import Spline from '@splinetool/react-spline';
-import Skeleton from '@mui/material/Skeleton';
-import Box from '@mui/material/Box';
+import Marquee from "react-fast-marquee";
+// import Spline from '@splinetool/react-spline';
+// import Skeleton from '@mui/material/Skeleton';
+// import Box from '@mui/material/Box';
 import Python from "./Python";
 
 const About = () => {
-  const [loadingSpline, setLoadingSpline] = useState(true);
+  // const [loadingSpline, setLoadingSpline] = useState(true);
   const [showPopup, setShowPopup] = useState(false);
 
   const openPopup = () => {
@@ -42,10 +44,10 @@ const About = () => {
     // setTimeout(() => {
     //   setLoading(false);
     // });
-    setTimeout(() => {
-      setLoadingSpline(false);
+    // setTimeout(() => {
+    //   setLoadingSpline(false);
 
-    }, 3000);
+    // }, 3000);
 
     AOS.init();
   }, []);
@@ -111,6 +113,7 @@ const About = () => {
                     Excel
                   </button> */}
                 </div>
+             
               </Col>
             </Row>
 
@@ -120,6 +123,7 @@ const About = () => {
               <Route path="/Python" element={<Python/>}/>
             </Routes>
           </div>
+       
 
           <Modal show={showPopup} onHide={closePopup}>
             <Modal.Header closeButton>
@@ -168,7 +172,7 @@ const About = () => {
               </Button>
             </Modal.Footer>
           </Modal>
-
+{/* 
           {loadingSpline ? (
             <Box sx={{ width: '100%', marginBottom: '30px' }}>
               <Skeleton />
@@ -181,9 +185,25 @@ const About = () => {
               id="Spline"
               scene="https://prod.spline.design/kQngrCjR7ZUwxw38/scene.splinecode"
               style={{ borderRadius: '8px', overflow: 'hidden', boxShadow: '0 0 20px rgba(73, 73, 73, 0.2)', marginBottom: '60px', backgroundColor: '#BED4D7' }} />
-          )}
+          )} */}
 
         </Container>
+        <Row>
+          <Marquee className="marquee" pauseOnHover pauseOnClick autoFill speed={10}>
+            <span className="marqueeElement pythonIcon"><FaPython  style={{ fontSize: '30px' }}></FaPython>&nbsp;Python</span>
+            <span className="marqueeElement vootstrapIcon"><FaBootstrap></FaBootstrap>&nbsp;Bootstrap</span>
+            <span className="marqueeElement figmaIcon"><FaFigma></FaFigma>&nbsp;Figma</span>
+            <span className="marqueeElement nadejsIcon"><FaNodeJs></FaNodeJs>&nbsp;Node.js</span>
+            <span className="marqueeElement "> <FaReact></FaReact>&nbsp;React</span>
+            <span className="marqueeElement"><FaHtml5></FaHtml5>&nbsp;HTML</span>
+            <span className="marqueeElement"><FaCss3></FaCss3>&nbsp;CSS</span>
+            <span className="marqueeElement"><FaJs></FaJs>&nbsp;JavaScript</span>
+            <span className="marqueeElement">Spline 3D</span>
+            <span className="marqueeElement">Firebase</span>
+            <span className="marqueeElement">API</span>
+            <span className="marqueeElement">API Testing</span>
+          </Marquee>
+        </Row>
       </BrowserRouter>
     </div>
   );

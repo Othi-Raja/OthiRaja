@@ -56,8 +56,10 @@ const Footer = () => {
           onClick={socialMediaLinks.phone}
         />
       </div>
+ 
 
       {/* Copyright */}
+      <hr/>
       <p style={{ color: 'gray', margin: '10px 0', fontSize: '10px' }}>Copyright © 2023 Othiraja</p>
       </Container>
     </footer>
