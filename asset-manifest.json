@@ -1,30 +1,18 @@
 {
   "files": {
-    "main.css": "/OthiRaja/static/css/main.33328f3d.css",
-    "main.js": "/OthiRaja/static/js/main.ded6286b.js",
-    "static/js/796.3f9989fb.chunk.js": "/OthiRaja/static/js/796.3f9989fb.chunk.js",
-    "static/js/493.e6fbcf31.chunk.js": "/OthiRaja/static/js/493.e6fbcf31.chunk.js",
-    "static/js/618.2d109922.chunk.js": "/OthiRaja/static/js/618.2d109922.chunk.js",
-    "static/js/48.83984042.chunk.js": "/OthiRaja/static/js/48.83984042.chunk.js",
-    "static/js/364.0f83b5b8.chunk.js": "/OthiRaja/static/js/364.0f83b5b8.chunk.js",
-    "static/js/2.98429de1.chunk.js": "/OthiRaja/static/js/2.98429de1.chunk.js",
+    "main.css": "/OthiRaja/static/css/main.86fabc9e.css",
+    "main.js": "/OthiRaja/static/js/main.3953cb7d.js",
     "static/js/651.e1f48b5f.chunk.js": "/OthiRaja/static/js/651.e1f48b5f.chunk.js",
     "static/media/pngwing.com.png": "/OthiRaja/static/media/pngwing.com.048431a93669e9e65fd4.png",
     "static/media/fig-img2.png": "/OthiRaja/static/media/fig-img2.696dc5d7fc3be91fe9ca.png",
     "static/media/instagram.webp": "/OthiRaja/static/media/instagram.55ba55f317d9810fc4b6.webp",
     "index.html": "/OthiRaja/index.html",
-    "main.33328f3d.css.map": "/OthiRaja/static/css/main.33328f3d.css.map",
-    "main.ded6286b.js.map": "/OthiRaja/static/js/main.ded6286b.js.map",
-    "796.3f9989fb.chunk.js.map": "/OthiRaja/static/js/796.3f9989fb.chunk.js.map",
-    "493.e6fbcf31.chunk.js.map": "/OthiRaja/static/js/493.e6fbcf31.chunk.js.map",
-    "618.2d109922.chunk.js.map": "/OthiRaja/static/js/618.2d109922.chunk.js.map",
-    "48.83984042.chunk.js.map": "/OthiRaja/static/js/48.83984042.chunk.js.map",
-    "364.0f83b5b8.chunk.js.map": "/OthiRaja/static/js/364.0f83b5b8.chunk.js.map",
-    "2.98429de1.chunk.js.map": "/OthiRaja/static/js/2.98429de1.chunk.js.map",
+    "main.86fabc9e.css.map": "/OthiRaja/static/css/main.86fabc9e.css.map",
+    "main.3953cb7d.js.map": "/OthiRaja/static/js/main.3953cb7d.js.map",
     "651.e1f48b5f.chunk.js.map": "/OthiRaja/static/js/651.e1f48b5f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.33328f3d.css",
-    "static/js/main.ded6286b.js"
+    "static/css/main.86fabc9e.css",
+    "static/js/main.3953cb7d.js"
   ]
 }
