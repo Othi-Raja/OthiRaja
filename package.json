@@ -21,6 +21,7 @@
     "bootstrap": "^5.3.2",
     "bootstrap-icons": "^1.11.2",
     "emailjs-com": "^3.2.0",
+    "firebase": "^10.8.1",
     "lodash": "^4.17.21",
     "lottie-web": "^5.12.2",
     "react": "^18.2.0",

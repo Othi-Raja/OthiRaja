@@ -26,6 +26,80 @@ body {
   z-index: 1000;
   /* Make sure the navbar appears above other elements on the page */
 }
+
+
+/* Home btn style  */
+/* CSS */
+.button-56 {
+  margin-bottom: 40px;
+  align-items: center;
+  background-color: #ffffff;
+  border: 2px solid #111;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color:rgb(0, 0, 0);
+  cursor: pointer;
+  display: flex;
+  font-family: Inter,sans-serif;
+  font-size: 16px;
+  height: 48px;
+  justify-content: center;
+  line-height: 24px;
+ width: min-content;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  font-weight: bold;
+}
+
+/* .button-56:after {
+  background-color: #111;
+  border-radius: 8px;
+  content: "";
+  display: block;
+  height: 48px;
+  color: orange;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  top: -2px;
+  transform: translate(-8px, 8px);
+  transition: transform .2s ease-out;
+  z-index: -1;
+} */
+
+/* .button-56:hover:after {
+  transform: translate(0, 0);
+  color: orange;
+} */
+
+.button-56:active {
+  background-color: #ffdeda;
+  outline: 0;
+  color: orange;
+
+}
+
+.button-56:hover {
+  outline: 0;
+  color: rgb(255, 255, 255);
+  background-color: black;
+  font-weight: bold;
+  transition: all 300ms linear;
+}
+
+@media (min-width: 768px) {
+  .button-56 {
+    padding: 0 40px;
+   
+  }
+}
+
+
 /* Add styles for the active link
 .active-link{
   transition: cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -42,12 +116,15 @@ body {
   background-position: center;
   background-size: cover;
 } */
+
+
 .marquee {
 margin: 40px 40px 40px 0px;
 border-top: .8px solid  rgba(249, 108, 0, 0.407) ;
 border-bottom: .2px solid  rgba(249, 108, 0, 0.416) ;
-padding-top: 30px;
-padding-bottom: 30px;
+padding-top: 20px;
+padding-bottom: 20px;
+margin-bottom: 60px;
 }
 .marqueeElement {
   font-size: large;
@@ -157,6 +234,7 @@ nav {
   animation: bgc 2s infinite linear;
   margin-bottom: 50px;
 }
+
 @keyframes bgc {
   0% {
     filter: drop-shadow(20px 9px 89px black);
@@ -179,6 +257,7 @@ nav {
     transition: 110s;
   }
 }
+ 
 /* .logo {
   font-size: 2rem;
   font-weight: bold;
@@ -232,20 +311,22 @@ margin-bottom: 10px;
   box-shadow:2px #000000;
 } */
 /* CSS */
+
 .button-50 {
   appearance: button;
-  background-color: #000;
+  background-color: #ffffff;
   background-image: none;
-  border: 3px solid #000;
-  border-radius: 4px;
-  box-shadow: #fff 4px 4px 0 0, #000 4px 4px 0 1px;
+  border: 2px solid #000;
+  border-radius: 10px;
+  /* box-shadow: #fff 4px 4px 0 0, #000 4px 4px 0 1px; */
   box-sizing: border-box;
-  color: #fff;
+  color: #000000;
   cursor: pointer;
+  font-weight: bold;
   display: inline-block;
   font-family: ITCAvantGardeStd-Bk, Arial, sans-serif;
   font-size: 14px;
-  font-weight: 400;
+ 
   line-height: 20px;
   margin: 0 5px 10px 0;
   overflow: visible;
@@ -257,22 +338,21 @@ margin-bottom: 10px;
   -webkit-user-select: none;
   vertical-align: middle;
   white-space: nowrap;
-  margin-left: 10px;
+  /* margin-left: 10px; */
   margin-bottom: 20px;
 }
 .button-50:focus {
   text-decoration: none;
+ 
 }
-.button-50:hover {
-  text-decoration: none;
-  color: #b1b1b1;
-}
-.button-50 {
+ 
+.button-50 { 
   position: relative;
+
 }
-.button-50::after {
+/* .button-50::after {
   content: '\2192';
-  /* Unicode arrow right character */
+ 
   position: absolute;
   top: 50%;
   font-size: x-large;
@@ -281,30 +361,26 @@ margin-bottom: 10px;
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
   color: #ffffff;
-}
-.button-50:hover::after {
+} */
+/* .button-50:hover::after {
   opacity: 7;
   color: #ffffff;
-}
-.button-50:hover {
+} */
+.button-50:hover { 
   text-decoration: none;
+  background-color: black;
   color: #ffffff;
 }
-.button-50:active {
-  box-shadow: rgba(0, 0, 0, .125) 0 3px 5px inset;
+.button-50:active { 
   outline: 0;
   color: #ffffff;
 }
-.button-50:hover {
-  color: transparent;
-  /* Hide the text on hover */
-  color: #ffffff;
-}
-.button-50:not([disabled]):active {
-  box-shadow: #ffffff 2px 2px 0 0, #000 2px 2px 0 1px;
+ 
+.button-50:not([disabled]):active { 
   transform: translate(4px, 4px);
 }
 @media (min-width: 768px) {
+
   .button-50 {
     padding: 12px 50px;
   }
@@ -399,9 +475,13 @@ margin-bottom: 10px;
   top: 0;
   border-radius: 10px;
 }
-.skill-btn {
-  margin-top: 20px;
-}
+ .gap{
+  margin-right: 20px;
+  
+ }
+ .skill-btn{
+  text-align: center;
+ }
 .resume-doc {
   background-size: cover;
 }
@@ -413,6 +493,7 @@ margin-bottom: 10px;
   font-family: 'Poppins', sans-serif;
 }
 @media (max-width: 768px) {
+
   .text-center {
     display: flex;
     justify-content: center;
@@ -444,6 +525,7 @@ margin-bottom: 10px;
   }
   .skill-btn {
     margin-top: 20px;
+ 
   }
   .logo {
     font-family: 'Kenia', serif;
@@ -481,6 +563,7 @@ margin-bottom: 10px;
     width: 100%;
     padding: 20px;
   }
+ 
 }
 @media (max-width:388px) {
   .text-center {
@@ -490,9 +573,9 @@ margin-bottom: 10px;
     width: 100%;
     padding: 20px;
   }
-  .button-50::after {
+  /* .button-50::after {
     content: '\2192';
-    /* Unicode arrow right character */
+   
     position: absolute;
     top: 50%;
     font-size: x-large;
@@ -501,7 +584,7 @@ margin-bottom: 10px;
     opacity: 0;
     padding-left: -10px;
     transition: opacity 0.3s ease-in-out;
-    color: #ffffff;
+    color: #ffffff;} */
     .button-50 {
       display: grid;
       /* grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) ); */
@@ -509,20 +592,21 @@ margin-bottom: 10px;
       /* Adjust the minimum and maximum width as needed */
       grid-gap: 15px;
       appearance: button;
-      background-color: #000;
+      background-color: #ffffff;
       background-image: none;
-      border: 3px solid #000;
-      border-radius: 4px;
-      box-shadow: #fff 4px 4px 0 0, #000 4px 4px 0 1px;
+      border: 2px solid #000;
+      border-radius: 10px;
+      font-weight: bold;
+      /* box-shadow: #fff 4px 4px 0 0, #000 4px 4px 0 1px; */
       box-sizing: border-box;
-      color: #ffffff;
+      color: #000000;
       cursor: pointer;
       display: inline-block;
       font-family: ITCAvantGardeStd-Bk, Arial, sans-serif;
       font-size: 12px;
-      font-weight: 400;
+    
       line-height: 20px;
-      margin: 0 5px 9px 0;
+      margin: 0 5px 4px 0;
       overflow: visible;
       padding: 12px 25px;
       text-align: center;
@@ -532,32 +616,35 @@ margin-bottom: 10px;
       -webkit-user-select: none;
       vertical-align: middle;
       white-space: nowrap;
-      margin-left: 10px;
+      margin-bottom: 20px;
+      
     }
     .button-50:focus {
       text-decoration: none;
       color: #ffffff;
+    
     }
     .button-50:hover {
       text-decoration: none;
-      color: #ffffff;
+      color: #ffffff; 
     }
     .button-50:active {
-      box-shadow: rgba(0, 0, 0, .125) 0 3px 5px inset;
+      /* box-shadow: rgba(0, 0, 0, .125) 0 3px 5px inset; */
       outline: 0;
       color: #ffffff;
     }
     .button-50:not([disabled]):active {
-      box-shadow: #ffffff 2px 2px 0 0, #000 2px 2px 0 1px;
+      /* box-shadow: #ffffff 2px 2px 0 0, #000 2px 2px 0 1px; */
       transform: translate(4px, 4px);
-      color: #ffffff;
+      color: #000000;
     }
   }
-}
+
 @media (max-width:330px) {
   .button-50 {
     width: 100%;
     margin-right: 10px;
+    font-weight: bold;
   }
   .button-ex {
     width: 100%;

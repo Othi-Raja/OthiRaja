@@ -5,6 +5,7 @@ footer{
     background-repeat: no-repeat;
     background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)); Adjust the color and opacity as needed */
     background-image: linear-gradient(to top, #48464852 0%, #c1d2ea09 100%);
+  cursor: url('/src/icon/click24.png');
 }
 hr{
     color: orange;

@@ -62,7 +62,7 @@ const About = () => {
                   experiences
                 </p>
                 <button
-                  className="button-50"
+                  className="button-56"
                   onClick={openPopup}
                   data-aos="fade-up"
                 >
@@ -73,7 +73,7 @@ const About = () => {
                 <div className="skill-btn">
                 <Link to="/Python">
                   <button
-                    className="button-50"
+                    className="button-50 gap"
                     data-aos="zoom-in"
                     data-aos-easing="linear"
                   >
@@ -82,7 +82,7 @@ const About = () => {
                   </Link>
                   <Link to="/Figma">
                     <button
-                      className="button-50"
+                      className="button-50 gap"
                       data-aos="zoom-in"
                     >
                       Figma
@@ -90,7 +90,7 @@ const About = () => {
                   </Link>
                   <Link to="/FrontEndwork">
                     <button
-                      className="button-50"
+                      className="button-50 gap"
                       data-aos="zoom-in"
                     >
                       Front-End
