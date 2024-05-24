@@ -86,8 +86,10 @@
 .ViewMoreBtn {
   border: 0;
   outline: none;
-  border-bottom: 2px solid orange;
+  /* border-bottom: 2px solid orange; */
   border-radius: 0;
+  color: #183153;
+  font-weight: bold;
 }
 .view-More-FE-model {
   z-index: 1;
@@ -103,6 +105,16 @@
   transform: translateX(5px) translateY(-10px);
   color: orange;
 }
+.bi-info-circle
+{
+border: none;
+outline: none;
+}
+#my-tooltip-1{
+ background-color: #183153;
+ color: #FAFD5D;
+ border-radius: 30px;
+  }
 .FE_cardJson:focus:hover {
   transition: all .4s ease;
   transform: translateX(5px) translateY(-10px);
@@ -112,7 +124,7 @@
   padding-top: 20px;
   padding-bottom: 5px;
   color: #183153;
-  /* text-decoration: underline; */
+  
 }
 .modal-header {
   background-color: #FAFD5D;
