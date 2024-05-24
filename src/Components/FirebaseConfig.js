@@ -15,6 +15,6 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 // Initialize get analytics
-const analytics = getAnalytics(app);
+// const analytics = getAnalytics(app);
 // export app to contact form 
 export default app;
