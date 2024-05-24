@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import {  Link, animateScroll as scroll } from "react-scroll";
-import AOS from "aos"; 
+import { Link, animateScroll as scroll } from "react-scroll";
+import AOS from "aos";
 import { debounce } from "lodash";
 import "./App.css"; // Import your CSS file for styling
 const Navbar = () => {
@@ -33,7 +33,7 @@ const Navbar = () => {
         Ôr
       </div>
       <div className={`nav-list ${isMobile ? "active" : ""}`}>
-        <Link to="home" smooth={true} duration={500} spy={true} id="link" activeClass="active-link"  activeStyle={{
+        <Link to="home" smooth={true} duration={500} spy={true} id="link" activeClass="active-link" activeStyle={{
           borderBottom: "2px solid orange",
           color: "orange",
         }} offset={-200} onClick={debouncedHandleLinkClick}>
@@ -51,12 +51,12 @@ const Navbar = () => {
         }} offset={-200} onClick={debouncedHandleLinkClick}>
           Contact
         </Link>
-        <Link to="projects" smooth={true} duration={500} spy={true} id="link click" activeClass="active-link" activeStyle={{
+        {/* <Link to="projects" smooth={true} duration={500} spy={true} id="link click" activeClass="active-link" activeStyle={{
           borderBottom: "2px solid orange",
           color: "orange",
         }} offset={-100} onClick={debouncedHandleLinkClick}>
           Projects
-        </Link>
+        </Link> */}
       </div>
       <div className="mobile-menu" onClick={() => setMobile(prevMobile => !prevMobile)}>
         <span className={`bar ${isMobile ? "open" : ""}`}></span>

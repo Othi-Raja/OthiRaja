@@ -4,16 +4,15 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./ContactForm.css";
 import AOS from "aos"; // smart animation & transition
 import "aos/dist/aos.css"; // smart animation & transition
-import emailjs from "emailjs-com";
+import { Player } from "@lottiefiles/react-lottie-player";
+import app from './FirebaseConfig';
+import { getDatabase, ref, set, push } from 'firebase/database'
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css"; //Toastify for notification
 const ContactForm = () => {
   useEffect(() => {
     AOS.init();
   }, []);
-  (function () {
-    emailjs.init("VNTleMBW5RpUMxBDv");
-  })();
   // To show  Form succes notification
   const notify_sucess = () =>
     toast.success(" Submited Successfully ", {
@@ -28,6 +27,10 @@ const ContactForm = () => {
       style: {
         borderRadius: "15px", // Adjust the value to your desired curve
         color: "green",
+        textAlign: "center",
+        margin: '10px',
+        fontWeight: "bolder",
+        backgroundColor: "white"
       },
     });
   // To show error notification
@@ -36,7 +39,7 @@ const ContactForm = () => {
       position: "top-center",
       autoClose: 5000,
       hideProgressBar: true,
-      closeOnClick: true,
+      closeOnClick: false,
       pauseOnHover: true,
       draggable: true,
       progress: undefined,
@@ -44,72 +47,103 @@ const ContactForm = () => {
       style: {
         borderRadius: "15px", // Adjust the value to your desired curve
         color: "red",
+        letterSpacing: "1px",
+        fontSize: "16px",
+        fontWeight: "bolder",
+        backgroundColor: "white"
       },
     });
   };
-  const [formSubmitted, setFormSubmitted] = useState(false);
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-  const formsubmit = (e) => {
-    e.preventDefault(); /// To stop window loading  when Form submit
-    const currentFormData = {
-      name: document.getElementById("formName").value,
-      email: document.getElementById("formEmail").value,
-      message: document.getElementById("formMessage").value,
-    };
-    emailjs
-      .send("service_1h6dhgl", "template_l30j0dj", currentFormData)
-      .then((response) => {
-        // console.log("Email sent successfully:");
-        notify_sucess(); // Show success notification
-        setFormSubmitted(true);
-        // Clear the form data After Data Submited
-        setFormData({
-          name: "",
-          email: "",
-          message: "",
-        });
-      })
-      //error handelling phase
-      .catch((error) => {
-        // console.error("Email sending failed:", error);
-        notify_error(); // To show error notification
-      });
+  const field_alert = () => {
+    toast.info("Fill All fields", {
+      position: "top-center",
+      autoClose: 5000,
+      hideProgressBar: true,
+      closeOnClick: false,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "white",
+      style: {
+        borderRadius: "15px", // Adjust the value to your desired curve
+        color: "black",
+        textAlign: "center",
+        margin: '10px',
+        fontWeight: "bolder",
+        backgroundColor: "white",
+        letterSpacing: "1px",
+        fontSize: "16px"
+      },
+    });
   };
-  // Check if the form has been submitted successfully
-  if (formSubmitted) {
-    // Reset the state to allow future submissions
-    setFormSubmitted(false);
-  }
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: '',
+  });
+  const formsubmit = async (e) => {
+    const submitBtn = document.querySelector('#form-submit');
+    submitBtn.disabled = true;
+    submitBtn.style.backgroundColor = 'grey';
+    e.preventDefault(); /// To stop window loading when Form submit
+    let name = document.getElementById("formName").value
+    let email = document.getElementById("formEmail").value
+    let message = document.getElementById("formMessage").value
+    //  reference id name 
+    let refname = document.getElementById("formName").value
+    // Push data to Firebase
+    const db = getDatabase(app);
+    if (name && email && message) {
+      const newProductRef = push(ref(db, refname));
+      try {
+        await set(newProductRef, {
+          name: name,
+          email: email,
+          message: message,
+        });
+        notify_sucess(); // Notify user of successful submission
+        // Clear the form fields
+        document.getElementById('formName').value = '';
+        document.getElementById('formEmail').value = '';
+        document.getElementById('formMessage').value = '';
+      } catch (error) {
+        console.error("Error adding document: ", error);
+        notify_error(); // Notify user of error
+      }
+    }
+    else {
+      field_alert()
+    }
+    submitBtn.disabled = false; // Re-enable the submit button
+    submitBtn.style.backgroundColor = '';
+  };
   return (
     <div className="contact-form-container Contact">
       <Container className="form_glass">
+        <h1 className="form-title"  data-aos="fade-in">Get in Touch!</h1>
         <Row className="top_form">
-          <Col md={{ span: 6, offset: 3 }}>
-            <Form onSubmit={formsubmit}>
+          <Col lg={6} className="form-container">
+            <Form autoComplete="off">
               <Form.Group
                 controlId="formName"
                 data-aos="fade-in"
                 data-aos-duration="500"
                 data-aos-delay="300"
               >
-                <Form.Label>Name:</Form.Label>
+                {/* <Form.Label>Name:</Form.Label> */}
                 <Form.Control
-  type="text" 
-  placeholder="Enter your name"
-  required
-  className="input"
-  pattern="^[A-Za-z]+$"
-  title="Please enter only letters"
-  value={formData.name}
-  onChange={(e) => {
-    const inputValue = e.target.value.replace(/[^A-Za-z]/g, ''); // Remove non-alphabetic characters
-    setFormData({ ...formData, name: inputValue });
-  }}
-/>
+                  type="text"
+                  placeholder="Enter your name"
+                  required
+                  className="input"
+                  pattern="^[A-Za-z]+$"
+                  title="Please enter only letters"
+                  value={formData.name}
+                  onChange={(e) => {
+                    const inputValue = e.target.value.replace(/[^A-Za-z]/g, ''); // Remove non-alphabetic characters
+                    setFormData({ ...formData, name: inputValue });
+                  }}
+                />
               </Form.Group>
               <Form.Group
                 controlId="formEmail"
@@ -117,7 +151,7 @@ const ContactForm = () => {
                 data-aos-duration="500"
                 data-aos-delay="300"
               >
-                <Form.Label>Email:</Form.Label>
+                {/* <Form.Label>Email:</Form.Label> */}
                 <Form.Control
                   type="email"
                   placeholder="Enter your email"
@@ -135,7 +169,7 @@ const ContactForm = () => {
                 data-aos-duration="500"
                 data-aos-delay="300"
               >
-                <Form.Label>Message:</Form.Label>
+                {/* <Form.Label>Message:</Form.Label> */}
                 <Form.Control
                   as="textarea"
                   rows={4}
@@ -148,30 +182,18 @@ const ContactForm = () => {
                   }
                 />
               </Form.Group>
-              <Button
-                id="submit"
-                type="submit"
-                className="button_contact button-57"
-                data-aos="fade-in"
-                data-aos-duration="500"
-                data-aos-delay="300"
-              >
-                <span className="text">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="26"
-                    height="26"
-                    fill="currentColor"
-                    className="bi bi-envelope-arrow-up"
-                    viewBox="0 0 16 16"
-                  >
-                    <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v4.5a.5.5 0 0 1-1 0V5.383l-7 4.2-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h5.5a.5.5 0 0 1 0 1H2a2 2 0 0 1-2-1.99zm1 7.105 4.708-2.897L1 5.383zM1 4v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1" />
-                    <path d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m.354-5.354 1.25 1.25a.5.5 0 0 1-.708.708L13 12.207V14a.5.5 0 0 1-1 0v-1.717l-.28.305a.5.5 0 0 1-.737-.676l1.149-1.25a.5.5 0 0 1 .722-.016Z" />
-                  </svg>
-                </span>
-                <span>Submit</span>
-              </Button>
+              <Button onClick={formsubmit} className="w-100 form-submit-btn" id="form-submit"  data-aos="fade-in"  data-aos-duration="500"data-aos-delay="300">submit</Button>
             </Form>
+          </Col>
+          <Col lg={6}>
+            <Player
+              className="css-0"
+              autoplay
+              loop
+              controls={false}
+              src="https://lottie.host/ef5bbd10-4ba6-4715-bc3b-193c41ffa8bd/1bpyENYCn2.json"
+              style={{ width: "100%", height: "100%" }}
+            />
           </Col>
         </Row>
       </Container>

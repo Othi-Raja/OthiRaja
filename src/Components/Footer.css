@@ -1,29 +1,132 @@
-footer{
-    /* background: url("/src/icon/patten.svg") ;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)); Adjust the color and opacity as needed */
-    background-image: linear-gradient(to top, #48464852 0%, #c1d2ea09 100%);
-  cursor: url('/src/icon/click24.png');
+footer {
+    border-top-right-radius: 50px;
+    border-top-left-radius: 50px;
+    cursor: pointer;
 }
-hr{
-    color: orange;
+.copyright {
+    font-family: 'Courier New', Courier, monospace;
+    padding-top: 10px;
+    margin-top: 20px;
+    font-size: 10px;
+    color: whitesmoke;
 }
-.iconhover:hover{
-    color: orange;
+.yellow-bg {
+    background-color: #FAFD5D;
 }
-#linkedHover:hover {
-    animation: border 1s ease-out infinite;
+.footer-logo {
+    margin-top: 10px;
+    font-family: 'Kenia', serif;
+    font-size: 2rem;
 }
-@keyframes border {
-    0% {
-        border-bottom: 2px solid orange;
+#link-Hover {
+    color: white;
+    margin: 20px 20px;
+    cursor: pointer;
+    transition: all .1ms ease-in-out;
+}
+#link-Hover:hover {
+    transform: translateY(-3px);
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    transition: all .1ms ease-in-out;
+}
+@media (max-width:325px) {
+    .copyright {
+        font-family: 'Courier New', Courier, monospace;
+        margin-top: 5px;
+        font-size: 10px;
+        color: whitesmoke;
     }
-    50% {
-        border-bottom: 2px solid rgb(223, 198, 198);
+    .footer-logo {
+        margin-top: 10px;
+        font-family: 'Kenia', serif;
+        font-size: 2rem;
     }
-    100% {
-        border-bottom: 2px solid orange;
+    #link-Hover {
+        color: white;
+        margin: 10px 20px;
+        cursor: pointer;
+        transition: all .1ms ease-in-out;
+    }
+    #link-Hover:hover {
+        transform: translateY(-3px);
+        cursor: pointer;
+        color: rgb(255, 255, 255);
+        transition: all .1ms ease-in-out;
+    }
+}
+@media (max-width:376px) {
+    .copyright {
+        font-family: 'Courier New', Courier, monospace;
+        margin-top: 5px;
+        font-size: 10px;
+        color: whitesmoke;
+    }
+    .footer-logo {
+        margin-top: 10px;
+        font-family: 'Kenia', serif;
+        font-size: 2rem;
+    }
+    #link-Hover {
+        color: white;
+        margin: 10px 20px;
+        cursor: pointer;
+        transition: all .1ms ease-in-out;
+    }
+    #link-Hover:hover {
+        transform: translateY(-3px);
+        cursor: pointer;
+        color: rgb(255, 255, 255);
+        transition: all .1ms ease-in-out;
+    }
+}
+@media (max-width:426px) {
+    .copyright {
+        font-family: 'Courier New', Courier, monospace;
+        margin-top: 5px;
+        font-size: 10px;
+        color: whitesmoke;
+    }
+    .footer-logo {
+        margin-top: 10px;
+        font-family: 'Kenia', serif;
+        font-size: 2rem;
+    }
+    #link-Hover {
+        color: white;
+        margin: 10px 20px;
+        cursor: pointer;
+        transition: all .1ms ease-in-out;
+    }
+    #link-Hover:hover {
+        transform: translateY(-3px);
+        cursor: pointer;
+        color: rgb(255, 255, 255);
+        transition: all .1ms ease-in-out;
+    }
+}
+@media (max-width:769px) {
+    .copyright {
+        font-family: 'Courier New', Courier, monospace;
+        margin-top: 5px;
+        font-size: 10px;
+        color: whitesmoke;
+    }
+    .footer-logo {
+        margin-top: 10px;
+        font-family: 'Kenia', serif;
+        font-size: 2rem;
+    }
+    #link-Hover {
+        color: white;
+        margin: 10px 20px;
+        cursor: pointer;
+        transition: all .1ms ease-in-out;
+    }
+    #link-Hover:hover {
+        transform: translateY(-3px);
+        cursor: pointer;
+        color: rgb(255, 255, 255);
+        transition: all .1ms ease-in-out;
     }
 }

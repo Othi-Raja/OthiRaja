@@ -1,0 +1,31 @@
+[
+    {
+        "id": "1",
+        "title": "Amjathkhan",
+        "alt":"Amjathkhan",
+        "img": "https://firebasestorage.googleapis.com/v0/b/image-f2f77.appspot.com/o/am.png?alt=media&token=e0e66a05-6bc3-4b3d-aa7e-06377910de97",
+        "url": "https://amjathkhan.netlify.app/"
+    },
+    {
+        "id": "2",
+        "title": "HinaArora",
+        "alt":"HinaArora",
+        "img": "https://firebasestorage.googleapis.com/v0/b/image-f2f77.appspot.com/o/hina-arora.png?alt=media&token=292ef62e-8731-4587-8dcc-dcc8e507953a",
+        "url": "https://hinaarora.netlify.app/"
+    },
+    {
+        "id": "3",
+        "title": "Tanvi Khandelwal",
+        "alt":"Tanvi",
+        "img": "https://firebasestorage.googleapis.com/v0/b/image-f2f77.appspot.com/o/tanvi.png?alt=media&token=37e858e1-41b3-4c8c-b078-a63ce854dcae",
+        "url": "https://tanvi-khandelwal.netlify.app/"
+    }
+    ,
+    {
+        "id": "4",
+        "title": "Deepika",
+        "alt":"Deepika",
+        "img": "https://firebasestorage.googleapis.com/v0/b/image-f2f77.appspot.com/o/dp.png?alt=media&token=df57b821-4e00-4b24-a10e-61f713135cd6",
+        "url": "https://deepika-saini.netlify.app/"
+    }
+]
