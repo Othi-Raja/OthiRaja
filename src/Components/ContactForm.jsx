@@ -120,7 +120,7 @@ const ContactForm = () => {
   return (
     <div className="contact-form-container Contact">
       <Container className="form_glass">
-        <h1 className="form-title"  data-aos="fade-in">Get in Touch!</h1>
+        <h3 className="form-title"  data-aos="fade-in">Get in Touch!</h3>
         <Row className="top_form">
           <Col lg={6} className="form-container">
             <Form autoComplete="off">
