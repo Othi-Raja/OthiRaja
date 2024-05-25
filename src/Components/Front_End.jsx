@@ -85,9 +85,9 @@ const FrontEnd = () => {
           <div className="modal-content">
             <div className="modal-header">
               {/* <h5 className="modal-title" id="exampleModalLabel">My Works</h5> */}
-              <button type="button" className="btn-close " data-bs-dismiss="modal" aria-label="Close"></button>
+              <button type="button" className="btn-close frontend-modal-closebtn " data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div className="modal-body">
+            <div className="modal-body modal-bg">
               <Container>
                 <h2 className='work-title'>Intern <svg data-tooltip-id="my-tooltip-1" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-info-circle" viewBox="0 0 16 16">
                   <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
