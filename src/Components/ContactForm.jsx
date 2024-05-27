@@ -97,21 +97,29 @@ const ContactForm = () => {
       const newProductRef = push(ref(db, refname));
       try {
         await set(newProductRef, {
+          time: new Date().toLocaleString(),
           name: name,
           email: email,
           message: message,
         });
         notify_sucess(); // Notify user of successful submission
+        console.log("200")
         // Clear the form fields
         document.getElementById('formName').value = '';
         document.getElementById('formEmail').value = '';
         document.getElementById('formMessage').value = '';
       } catch (error) {
+        document.getElementById('formName').value = '';
+        document.getElementById('formEmail').value = '';
+        document.getElementById('formMessage').value = '';
         console.error("Error adding document: ", error);
         notify_error(); // Notify user of error
       }
     }
     else {
+      document.getElementById('formName').value = '';
+      document.getElementById('formEmail').value = '';
+      document.getElementById('formMessage').value = '';
       field_alert()
     }
     submitBtn.disabled = false; // Re-enable the submit button
@@ -123,7 +131,7 @@ const ContactForm = () => {
         <h3 className="form-title"  data-aos="fade-in">Get in Touch!</h3>
         <Row className="top_form">
           <Col lg={6} className="form-container">
-            <Form autoComplete="off">
+            <Form autoComplete="off" autoSave="off">
               <Form.Group
                 controlId="formName"
                 data-aos="fade-in"
@@ -182,7 +190,7 @@ const ContactForm = () => {
                   }
                 />
               </Form.Group>
-              <Button onClick={formsubmit} className="w-100 form-submit-btn" id="form-submit"  data-aos="fade-in"  data-aos-duration="500"data-aos-delay="300">submit</Button>
+              <Button onClick={formsubmit} className="w-100 form-submit-btn" id="form-submit"  >submit</Button>
             </Form>
           </Col>
           <Col lg={6}>

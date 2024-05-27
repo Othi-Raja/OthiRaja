@@ -4,7 +4,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import "bootstrap/dist/css/bootstrap.css";
 import "./App.css";
-import { FaReact,FaPython,FaBootstrap, FaFigma, FaNodeJs, FaHtml5, FaCss3, FaJs } from 'react-icons/fa';
+import { FaReact, FaPython, FaBootstrap, FaFigma, FaNodeJs, FaHtml5, FaCss3, FaJs } from 'react-icons/fa';
 // import { Audio } from 'react-loader-spinner'
 // import { BarLoader } from "react-spinners";
 import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
@@ -24,16 +24,16 @@ const About = () => {
   const closePopup = () => {
     setShowPopup(false);
   };
-  const downloadResume = () => {
-    const pdfUrl = "Resume-othiraja.png";
-    const link = document.createElement("a");
-    link.href = pdfUrl;
-    link.download = "Resume-othiraja.png"; // specify the filename
-    link.rel = "noopener noreferrer"; // set rel attribute for security
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-};
+  //   const downloadResume = () => {
+  //     const pdfUrl = "Resume-othiraja.png";
+  //     const link = document.createElement("a");
+  //     link.href = pdfUrl;
+  //     link.download = "Resume-othiraja.png"; // specify the filename
+  //     link.rel = "noopener noreferrer"; // set rel attribute for security
+  //     document.body.appendChild(link);
+  //     link.click();
+  //     document.body.removeChild(link);
+  // };
   // const [loadingResume, setLoading] = useState(true);
   useEffect(() => {
     // setTimeout(() => {
@@ -71,14 +71,14 @@ const About = () => {
               </Col>
               <Col sm={6}>
                 <div className="skill-btn">
-                <Link to="/Python">
-                  <button
-                    className="button-50 gap"
-                    data-aos="zoom-in"
-                    data-aos-easing="linear"
-                  >
-                    Python
-                  </button>
+                  <Link to="/Python">
+                    <button
+                      className="button-50 gap"
+                      data-aos="zoom-in"
+                      data-aos-easing="linear"
+                    >
+                      Python
+                    </button>
                   </Link>
                   <Link to="/Figma">
                     <button
@@ -109,7 +109,7 @@ const About = () => {
             <Routes>
               <Route path="/Figma" element={<Figma />} />
               <Route path="/FrontEndwork" element={<FrontEnd />} />
-              <Route path="/Python" element={<Python/>}/>
+              <Route path="/Python" element={<Python />} />
             </Routes>
           </div>
           <Modal show={showPopup} onHide={closePopup}>
@@ -145,7 +145,6 @@ const About = () => {
                     margin: 0,
                   }}
                   src="https://www.canva.com/design/DAF0cDxrFUo/view?embed"
-                  allowFullScreen
                   allow="fullscreen"
                 />
               </div>
@@ -154,12 +153,14 @@ const About = () => {
               <Button variant="secondary" onClick={closePopup}>
                 Close
               </Button>
-              <Button variant="primary" onClick={downloadResume} download>
-                Download Resume 
-              </Button>
+              <a href="./Resume-othiraja.png" download="./Resume-othiraja.png">
+                <Button variant="primary">
+                  Download Resume
+                </Button>
+              </a>
             </Modal.Footer>
           </Modal>
-{/* 
+          {/* 
           {loadingSpline ? (
             <Box sx={{ width: '100%', marginBottom: '30px' }}>
               <Skeleton />
@@ -176,7 +177,7 @@ const About = () => {
         </Container>
         <Row>
           <Marquee className="marquee" pauseOnHover pauseOnClick autoFill speed={10}>
-            <span className="marqueeElement"><FaPython  style={{ fontSize: '30px' }}></FaPython>&nbsp;Python</span>
+            <span className="marqueeElement"><FaPython style={{ fontSize: '30px' }}></FaPython>&nbsp;Python</span>
             <span className="marqueeElement"><FaBootstrap></FaBootstrap>&nbsp;Bootstrap</span>
             <span className="marqueeElement"><FaFigma></FaFigma>&nbsp;Figma</span>
             <span className="marqueeElement"><FaNodeJs></FaNodeJs>&nbsp;Node.js</span>
