@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import "bootstrap/dist/css/bootstrap.css";
 import { BarLoader } from "react-spinners";
 import '../App.css'
 import 'w3-css';
@@ -24,7 +25,9 @@ const Networkerr = ({ children }) => {
     <div className="loader">
       {loading ? (
         // Render the loader while loading is true
-        <BarLoader color={"red"} style={{ width: '100%' }} loading={loading} />
+  <div className="loader-container d-flex align-items-center justify-content-center">
+            <BarLoader color={"orange"}width={'150px'} height={'4.5px'} className="loader-radius" loading={loading} />
+  </div>
       ) : (
         // Render the children when loading is false
         children
