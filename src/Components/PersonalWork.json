@@ -19,5 +19,13 @@
         "alt": "Sorting",
         "img": "https://firebasestorage.googleapis.com/v0/b/image-f2f77.appspot.com/o/sample.png?alt=media&token=2a2fe43a-f0a0-4e95-98be-fa8e1874e227",
         "url": "https://othi-raja.github.io/simple/"
+    },
+    {
+        "id": "3",
+        "title": "WowClothes.com",
+        "alt": "WowClothes.com",
+        "img": "https://firebasestorage.googleapis.com/v0/b/image-f2f77.appspot.com/o/wowclothes.png?alt=media&token=0f1932bb-6413-41b3-90e9-a0f31f74b713",
+        "url": "https://othi-raja.github.io/Wowclothes_landing_Page/"
     }
+
 ]
