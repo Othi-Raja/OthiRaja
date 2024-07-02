@@ -21,11 +21,18 @@
         "url": "https://othi-raja.github.io/simple/"
     },
     {
-        "id": "3",
+        "id": "4",
         "title": "WowClothes.com",
         "alt": "WowClothes.com",
         "img": "https://firebasestorage.googleapis.com/v0/b/image-f2f77.appspot.com/o/wowclothes.png?alt=media&token=0f1932bb-6413-41b3-90e9-a0f31f74b713",
         "url": "https://othi-raja.github.io/Wowclothes_landing_Page/"
-    }
+    },
+    {
+        "id":"5",
+        "title":"UrbanRider",
+        "alt":"UrbanRider",
+        "img":"https://firebasestorage.googleapis.com/v0/b/image-f2f77.appspot.com/o/urbanRider.png?alt=media&token=b59030ec-d040-4874-bc62-6e3ba4259e34",
+        "url":"https://urbanrider-5870e.firebaseapp.com/"
+        }
 
 ]
