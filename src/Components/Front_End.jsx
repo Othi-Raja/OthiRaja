@@ -126,7 +126,7 @@ const FrontEnd = () => {
                 <ReactTooltip
                   id="my-tooltip-1"
                   place="right"
-                  content="Remote / Chennai / Aug 2024 - Present / Stipend "
+                  content="Remote / Aug 2024 - Present / Stipend "
                 />
                      {internData && internData.map(item => (
                     <Col key={item.id} lg={4} className='view-More-FE-model'>
