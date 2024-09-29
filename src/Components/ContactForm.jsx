@@ -8,6 +8,7 @@ import { Player } from "@lottiefiles/react-lottie-player";
 import app from './FirebaseConfig';
 import { getDatabase, ref, set, push } from 'firebase/database'
 import { toast } from "react-toastify";
+import formAnimation from '../icon/form_animation.json'
 import "react-toastify/dist/ReactToastify.css"; //Toastify for notification
 const ContactForm = () => {
   useEffect(() => {
@@ -199,7 +200,7 @@ const ContactForm = () => {
               autoplay
               loop
               controls={false}
-              src="https://lottie.host/ef5bbd10-4ba6-4715-bc3b-193c41ffa8bd/1bpyENYCn2.json"
+              src={formAnimation}
               style={{ width: "100%", height: "100%" }}
             />
           </Col>

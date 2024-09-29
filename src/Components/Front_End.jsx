@@ -5,6 +5,7 @@ import jsonData from './Data.json';
 import 'react-tooltip/dist/react-tooltip.css';
 import { Tooltip as ReactTooltip } from 'react-tooltip';
 import perWork from './PersonalWork.json';
+import interndata from './intern_data.json';
 // import Marquee from "react-fast-marquee";
 import { Col, Container, Row } from "react-bootstrap";
 // import FEIcon from '../icon/FEIcon.svg' 
@@ -16,9 +17,11 @@ let url = {
 const FrontEnd = () => {
   const [data, setData] = useState(null);
   const [data1, setData1] = useState(null);
+  const [internData ,setInternData] = useState(null)
   useEffect(() => {
     setData(jsonData);
     setData1(perWork);
+    setInternData(interndata)
   }, []);
   return (
     <div>
@@ -89,15 +92,17 @@ const FrontEnd = () => {
             </div>
             <div className="modal-body modal-bg">
               <Container>
-                <h2 className='work-title'>Intern <svg data-tooltip-id="my-tooltip-1" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-info-circle" viewBox="0 0 16 16">
+                <h3 className='work-title'>Intern@<a href='https://www.linkedin.com/company/softrate/about/' target='_blank' rel="noreferrer">SoftRate</a> <svg data-tooltip-id="my-tooltip-1" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-info-circle" viewBox="0 0 16 16">
                   <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
                   <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0" />
-                </svg></h2>
+                </svg></h3>
+                 
                 <ReactTooltip
                   id="my-tooltip-1"
                   place="right"
-                  content="works during my internship ⭐⭐"
+                  content=" Remote / Chennai / Jan 2024 - Apr 2024 /4 Month "
                 />
+                
                 <Row style={{ width: '100%', marginTop: '10px' }}>
                   {data && data.map(item => (
                     <Col key={item.id} lg={4} className='view-More-FE-model'>
@@ -112,7 +117,34 @@ const FrontEnd = () => {
                       </div>
                     </Col>
                   ))}
-                  <h2 className='work-title'>Other</h2>
+                  <Row className='pt-4'>
+
+                  <h3 className='work-title '>Intern@<a href='https://www.linkedin.com/company/urbanriderapp/about/' target='_blank' rel="noreferrer">UrbanRider </a><svg data-tooltip-id="my-tooltip-1" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-info-circle mx-2" viewBox="0 0 16 16">
+                  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
+                  <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0" />
+                </svg></h3>      
+                <ReactTooltip
+                  id="my-tooltip-1"
+                  place="right"
+                  content="Remote / Chennai / Aug 2024 - Present / Stipend "
+                />
+                     {internData && internData.map(item => (
+                    <Col key={item.id} lg={4} className='view-More-FE-model'>
+                      <div className="FE_cardJson w-100 " onClick={() => window.open(item.url, '_blank')}>
+                        <img className="Vm-modal-img img-fluid " src={item.img} alt={item.alt} />
+                        {/* <div className="arrowicon">
+                        <img src={FEIcon} alt="iconArrow" className='iconArrow' />
+                      </div> */}
+                        <div className="title-container  float-start ">
+                          <h5>{item.title} <p className="blink"></p></h5>
+                        </div>
+                      </div>
+                    </Col>
+                  ))}
+                  </Row>
+                  <Row className='pt-5'>
+
+                  <h2 className='work-title'>Others</h2>
                   {data1 && data1.map(item => (
                     <Col key={item.id} lg={4} className='view-More-FE-model'>
                       <div className="FE_cardJson w-100 " onClick={() => window.open(item.url, '_blank')}>
@@ -126,6 +158,7 @@ const FrontEnd = () => {
                       </div>
                     </Col>
                   ))}
+                  </Row>
                 </Row>
               </Container>
             </div>
