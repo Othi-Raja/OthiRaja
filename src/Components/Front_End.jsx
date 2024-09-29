@@ -127,7 +127,7 @@ const FrontEnd = () => {
                   id="my-tooltip-1"
                   place="right"
                   content="Remote / Aug 2024 - Present / Stipend "
-                />
+                /> 
                      {internData && internData.map(item => (
                     <Col key={item.id} lg={4} className='view-More-FE-model'>
                       <div className="FE_cardJson w-100 " onClick={() => window.open(item.url, '_blank')}>
