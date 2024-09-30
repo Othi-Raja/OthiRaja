@@ -10,7 +10,7 @@ import { FaReact, FaPython, FaBootstrap, FaFigma, FaNodeJs, FaHtml5, FaCss3, FaJ
 import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
 import Figma from "./Figma";
 import FrontEnd from "./Front_End";
-import Marquee from "react-fast-marquee";
+import Marquee from "react-fast-marquee"; 
 // import Spline from '@splinetool/react-spline';
 // import Skeleton from '@mui/material/Skeleton';
 // import Box from '@mui/material/Box';
