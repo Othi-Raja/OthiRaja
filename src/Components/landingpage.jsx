@@ -7,6 +7,8 @@ import { Container, Col, Row } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.css"; 
 import "./App.css"; // You can create this CSS file for styling
 import { Player } from "@lottiefiles/react-lottie-player";
+
+
 const LandingPage = () => {
 
 

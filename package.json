@@ -32,7 +32,7 @@
     "react-fast-marquee": "^1.6.2",
     "react-icons": "^4.12.0",
     "react-loader-spinner": "^6.1.4",
-    "react-loading-skeleton": "^3.3.1",
+    "react-loading-skeleton": "^3.5.0",
     "react-router-dom": "^6.21.2",
     "react-scripts": "5.0.1",
     "react-scroll": "^1.9.0",
@@ -45,7 +45,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "jo": "react-scripts start",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "build": "react-scripts build",
