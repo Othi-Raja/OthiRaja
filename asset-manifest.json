@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/OthiRaja/static/css/main.a7729a71.css",
-    "main.js": "/OthiRaja/static/js/main.7e80437e.js",
+    "main.css": "/OthiRaja/static/css/main.bcc48d4e.css",
+    "main.js": "/OthiRaja/static/js/main.8e471501.js",
     "static/js/845.20843c5e.chunk.js": "/OthiRaja/static/js/845.20843c5e.chunk.js",
     "static/media/fig-img2.png": "/OthiRaja/static/media/fig-img2.696dc5d7fc3be91fe9ca.png",
     "index.html": "/OthiRaja/index.html",
     "static/media/linktree-logo-icon.svg": "/OthiRaja/static/media/linktree-logo-icon.ec304d6feed772bc0de59978cbf053c9.svg",
-    "main.a7729a71.css.map": "/OthiRaja/static/css/main.a7729a71.css.map",
-    "main.7e80437e.js.map": "/OthiRaja/static/js/main.7e80437e.js.map",
+    "main.bcc48d4e.css.map": "/OthiRaja/static/css/main.bcc48d4e.css.map",
+    "main.8e471501.js.map": "/OthiRaja/static/js/main.8e471501.js.map",
     "845.20843c5e.chunk.js.map": "/OthiRaja/static/js/845.20843c5e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a7729a71.css",
-    "static/js/main.7e80437e.js"
+    "static/css/main.bcc48d4e.css",
+    "static/js/main.8e471501.js"
   ]
 }
