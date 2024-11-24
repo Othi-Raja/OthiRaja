@@ -6,5 +6,12 @@
         "alt":"UrbanRider",
         "img":"https://firebasestorage.googleapis.com/v0/b/image-f2f77.appspot.com/o/urbanRider.png?alt=media&token=b59030ec-d040-4874-bc62-6e3ba4259e34",
         "url":"https://urbanrider.in/"
-        }
+        },
+        {
+            "id":"2",
+            "title":"Go Extra Mile",
+            "alt":"Go Extra Mile",
+            "img":"https://firebasestorage.googleapis.com/v0/b/image-f2f77.appspot.com/o/gem.png?alt=media&token=d7b95f86-16e4-4989-af23-90107033cf75",
+            "url":"https://goextramile.web.app/"
+            }
 ]

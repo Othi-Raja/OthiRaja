@@ -1,10 +1,11 @@
 import React from 'react';
-import { FaInstagram, FaFacebook, FaLinkedin, FaGithub } from 'react-icons/fa';
+import { FaInstagram, FaWhatsapp, FaLinkedin, FaGithub } from 'react-icons/fa';
 import "./Footer.css";
 import { Container, Col, Row } from "react-bootstrap";
+import { Whatsapp } from 'react-bootstrap-icons';
 const socialMediaLinks = {
-  instagram: () => window.open('https://www.instagram.com/', '_blank'),
-  facebook: () => window.open('https://www.facebook.com/', '_blank'),
+  instagram: () => window.open('https://www.instagram.com/othiraja_/', '_blank'),
+  Whatsapp: () => window.open('https://wa.me/+918825722455', '_blank'),
   linkedin: () => window.open('https://www.linkedin.com/in/othi-raja-45176b255/', '_blank'),
   github: () => window.open('https://github.com/Othi-Raja', '_blank'),
 };
@@ -29,10 +30,10 @@ const Footer = () => {
                   size={25}
                   onClick={socialMediaLinks.instagram}
                 />
-                <FaFacebook
+                <FaWhatsapp
                   id='link-Hover'
                   size={25}
-                  onClick={socialMediaLinks.facebook}
+                  onClick={socialMediaLinks.Whatsapp}
                 />
                 <FaLinkedin
                   id='link-Hover'

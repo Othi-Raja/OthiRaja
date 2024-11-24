@@ -8,6 +8,8 @@ import { FaReact, FaPython, FaBootstrap, FaFigma, FaNodeJs, FaHtml5, FaCss3, FaJ
 // import { Audio } from 'react-loader-spinner'
 // import { BarLoader } from "react-spinners";
 import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
+import { IoLogoFirebase } from "react-icons/io5";
+import { SiMui } from "react-icons/si";
 import Figma from "./Figma";
 import FrontEnd from "./Front_End";
 import Marquee from "react-fast-marquee"; 
@@ -185,10 +187,9 @@ const About = () => {
             <span className="marqueeElement"><FaHtml5></FaHtml5>&nbsp;HTML</span>
             <span className="marqueeElement"><FaCss3></FaCss3>&nbsp;CSS</span>
             <span className="marqueeElement"><FaJs></FaJs>&nbsp;JavaScript</span>
-            <span className="marqueeElement">Spline 3D</span>
-            <span className="marqueeElement">Firebase</span>
-            <span className="marqueeElement">API</span>
-            <span className="marqueeElement">API Testing</span>
+            <span className="marqueeElement"><IoLogoFirebase />&nbsp;Firebase</span>
+            <span className="marqueeElement">API  </span>
+            <span className="marqueeElement"><SiMui />&nbsp;MUI</span>
           </Marquee>
         </Row>
       </BrowserRouter>
