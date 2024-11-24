@@ -3,15 +3,16 @@ import { initializeApp } from "firebase/app";
 // import { getAnalytics } from "firebase/analytics";
 
 const firebaseConfig = {
-  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
-  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
-  databaseURL: process.env.REACT_APP_FIREBASE_DATABASE_URL,
-  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
-  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
-  appId: process.env.REACT_APP_FIREBASE_APP_ID,
-  measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID
+  apiKey: "AIzaSyAZrXqVD7NVdYOVAzjDko-ONksRoMTc7ho",
+  authDomain: "portfolioformdata-4caae.firebaseapp.com",
+  databaseURL: "https://portfolioformdata-4caae-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "portfolioformdata-4caae",
+  storageBucket: "portfolioformdata-4caae.appspot.com",
+  messagingSenderId: "51070256017",
+  appId: "1:51070256017:web:9395f746a33189a57c1030",
+  measurementId: "G-PEYFMT3DE4"
 };
+
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 // Initialize get analytics

@@ -153,7 +153,7 @@ const About = () => {
               <Button variant="secondary" onClick={closePopup}>
                 Close
               </Button>
-              <a href="./Resume-othiraja.png" download="./Resume-othiraja.png">
+              <a href="./Resume_othiraja.png" download="./Resume_othiraja.png">
                 <Button variant="primary">
                   Download Resume
                 </Button>

@@ -91,11 +91,18 @@ const ContactForm = () => {
     let email = document.getElementById("formEmail").value
     let message = document.getElementById("formMessage").value
     //  reference id name 
-    let refname = document.getElementById("formName").value
+    let refname = new Date();
+    let date = refname.getDate();            // Day of the month (1-31)
+    let month = refname.getMonth() + 1;       // Month (1-12, adding 1 to zero-based index)
+    let year = refname.getFullYear();
+    let hour = refname.getHours();
+    let minute = refname.getMinutes();
+    let refid = `${String(date).padStart(2, '0')}:${String(month).padStart(2, '0')}:${year}:${String(hour).padStart(2, '0')}:${String(minute).padStart(2, '0')}`;
+    console.log(refid);
     // Push data to Firebase
     const db = getDatabase(app);
     if (name && email && message) {
-      const newProductRef = push(ref(db, refname));
+      const newProductRef = push(ref(db, String(refid + " "+ name)));
       try {
         await set(newProductRef, {
           time: new Date().toLocaleString(),
@@ -123,16 +130,17 @@ const ContactForm = () => {
       document.getElementById('formMessage').value = '';
       field_alert()
     }
+    
     submitBtn.disabled = false; // Re-enable the submit button
     submitBtn.style.backgroundColor = '';
   };
   return (
     <div className="contact-form-container Contact">
       <Container className="form_glass">
-        <h3 className="form-title"  data-aos="fade-in">Get in Touch!</h3>
+        <h3 className="form-title" data-aos="fade-in">Get in Touch!</h3>
         <Row className="top_form">
           <Col lg={6} className="form-container">
-            <Form autoComplete="off" autoSave="off">
+            <Form>
               <Form.Group
                 controlId="formName"
                 data-aos="fade-in"

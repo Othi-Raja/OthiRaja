@@ -28,7 +28,7 @@ const FrontEnd = () => {
   }, []);
   setTimeout(() => {
     setloader(false)
-  }, 1000);
+  }, 2000);
   return (
     <div>
       <Container className="figma_container text-center ">
