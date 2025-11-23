@@ -82,56 +82,68 @@ const ContactForm = () => {
     email: '',
     message: '',
   });
+  // const sendEmail = async (formData) => {
+  //   try {
+  //     const response = await fetch('https://formsubmit.co/ajax/othiraja64@gmail.com', {
+  //       method: 'POST',
+  //       headers: { 'Content-Type': 'application/json' },
+  //       body: JSON.stringify(formData),
+  //     });
+  //     if (!response.ok) throw new Error(`Error: ${response.statusText}`);
+  //     console.log("Form submitted successfully:", await response.json());
+  //   } catch (error) {
+  //     console.error("Form submission failed:", error);
+  //   }
+  // };
   const formsubmit = async (e) => {
+    e.preventDefault(); // Stop window reload on form submit
     const submitBtn = document.querySelector('#form-submit');
     submitBtn.disabled = true;
     submitBtn.style.backgroundColor = 'grey';
-    e.preventDefault(); /// To stop window loading when Form submit
-    let name = document.getElementById("formName").value
-    let email = document.getElementById("formEmail").value
-    let message = document.getElementById("formMessage").value
-    //  reference id name 
-    let refname = new Date();
-    let date = refname.getDate();            // Day of the month (1-31)
-    let month = refname.getMonth() + 1;       // Month (1-12, adding 1 to zero-based index)
-    let year = refname.getFullYear();
-    let hour = refname.getHours();
-    let minute = refname.getMinutes();
-    let refid = `${String(date).padStart(2, '0')}:${String(month).padStart(2, '0')}:${year}:${String(hour).padStart(2, '0')}:${String(minute).padStart(2, '0')}`;
-    console.log(refid);
-    // Push data to Firebase
-    const db = getDatabase(app);
+    // Collect form values
+    const name = document.getElementById("formName").value.trim();
+    const email = document.getElementById("formEmail").value.trim();
+    const message = document.getElementById("formMessage").value.trim();
+    const refname = name; // Use name as Firebase reference
+    // Check required fields
     if (name && email && message) {
-      const newProductRef = push(ref(db, String(refid + " "+ name)));
+      // Prepare form data for FormSubmit API
+      const formData = { name, email, message };
       try {
+        // 1️⃣ Send Email via FormSubmit
+        const response = await fetch("https://formsubmit.co/ajax/othiraja64@gmail.com", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(formData),
+        });
+        if (!response.ok) throw new Error(`FormSubmit Error: ${response.statusText}`);
+        const emailResult = await response.json();
+        console.log("✅ Email sent successfully:", emailResult);
+        // 2️⃣ Push data to Firebase
+        const db = getDatabase(app);
+        const newProductRef = push(ref(db, refname));
         await set(newProductRef, {
           time: new Date().toLocaleString(),
-          name: name,
-          email: email,
-          message: message,
+          name,
+          email,
+          message,
         });
-        notify_sucess(); // Notify user of successful submission
-        console.log("200")
-        // Clear the form fields
+        console.log("✅ Data pushed to Firebase");
+        notify_sucess(); // Show success notification
+        // Clear form fields
         document.getElementById('formName').value = '';
         document.getElementById('formEmail').value = '';
         document.getElementById('formMessage').value = '';
       } catch (error) {
-        document.getElementById('formName').value = '';
-        document.getElementById('formEmail').value = '';
-        document.getElementById('formMessage').value = '';
-        console.error("Error adding document: ", error);
-        notify_error(); // Notify user of error
+        console.error("❌ Submission failed:", error);
+        notify_error(); // Show error notification
       }
+    } else {
+      console.warn("⚠️ Required fields missing");
+      field_alert(); // Notify user about missing fields
     }
-    else {
-      document.getElementById('formName').value = '';
-      document.getElementById('formEmail').value = '';
-      document.getElementById('formMessage').value = '';
-      field_alert()
-    }
-    
-    submitBtn.disabled = false; // Re-enable the submit button
+    // Re-enable submit button
+    submitBtn.disabled = false;
     submitBtn.style.backgroundColor = '';
   };
   return (
@@ -140,7 +152,7 @@ const ContactForm = () => {
         <h3 className="form-title" data-aos="fade-in">Get in Touch!</h3>
         <Row className="top_form">
           <Col lg={6} className="form-container">
-            <Form>
+            <Form autoSave="off"  >
               <Form.Group
                 controlId="formName"
                 data-aos="fade-in"

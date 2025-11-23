@@ -39,11 +39,23 @@ const Navbar = () => {
         }} offset={-200} onClick={debouncedHandleLinkClick}>
           Home
         </Link>
-        <Link to="About" smooth={true} duration={500} spy={true} id="link" activeClass="active-link" activeStyle={{
+        <Link to="about" smooth={true} duration={500} spy={true} id="link" activeClass="active-link" activeStyle={{
           borderBottom: "2px solid orange",
           color: "orange",
         }} offset={-150} onClick={debouncedHandleLinkClick}>
           About
+        </Link>
+        <Link to="work" smooth={true} duration={500} spy={true} id="link" activeClass="active-link" activeStyle={{
+          borderBottom: "2px solid orange",
+          color: "orange",
+        }} offset={-150} onClick={debouncedHandleLinkClick}>
+          Works
+        </Link>
+        <Link to="projects" smooth={true} duration={500} spy={true} id="link" activeClass="active-link" activeStyle={{
+          borderBottom: "2px solid orange",
+          color: "orange",
+        }} offset={-150} onClick={debouncedHandleLinkClick}>
+          Projects
         </Link>
         <Link to="Contact" smooth={true} duration={500} spy={true} id="link" activeClass="active-link" activeStyle={{
           borderBottom: "2px solid orange",

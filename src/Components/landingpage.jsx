@@ -4,14 +4,10 @@ import "aos/dist/aos.css";
 import linktree from "../icon/linktree-logo-icon.svg"
 // import { FaLinkedin } from 'react-icons/fa';
 import { Container, Col, Row } from "react-bootstrap";
-import "bootstrap/dist/css/bootstrap.css"; 
+import "bootstrap/dist/css/bootstrap.css";
 import "./App.css"; // You can create this CSS file for styling
 import { Player } from "@lottiefiles/react-lottie-player";
-
-
 const LandingPage = () => {
-
-
   useEffect(() => {
     // let handleRedirect = (url) => {
     //   window.location.href = url;
@@ -39,13 +35,13 @@ const LandingPage = () => {
             </div>
             <Row>
               <Col>
-              <button className="button-56" onClick={() =>window.open('https://linktr.ee/othiraja', '_blank')} >Linktree<img src={linktree} alt="icon" height={20} style={{ paddingLeft: '10px' }} /></button>
-
-               
+                <button className="button-56 hover:scale-105 transition-transform duration-200" onClick={() => window.open('https://linktr.ee/othiraja', '_blank')} >
+                  Linktree
+                  <img src={linktree} alt="icon" id="icon" style={{ height: '20px', paddingLeft: '10px' }} />
+                </button>
               </Col>
             </Row>
           </Col>
-
           <Col sm={6} data-aos="fade-in" data-aos-duration="1100">
             {/* <video
             src="https://cdn.sanity.io/files/599r6htc/localized/ab4fa4eb170518f551d82cad01557e91952840a1.mp4"

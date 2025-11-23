@@ -1,11 +1,10 @@
 import React from 'react';
-import { FaInstagram, FaWhatsapp, FaLinkedin, FaGithub } from 'react-icons/fa';
+import { FaInstagram, FaLinkedin, FaGithub } from 'react-icons/fa';
 import "./Footer.css";
 import { Container, Col, Row } from "react-bootstrap";
-import { Whatsapp } from 'react-bootstrap-icons';
 const socialMediaLinks = {
-  instagram: () => window.open('https://www.instagram.com/othiraja_/', '_blank'),
-  Whatsapp: () => window.open('https://wa.me/+918825722455', '_blank'),
+  instagram: () => window.open('https://www.instagram.com/', '_blank'),
+  facebook: () => window.open('https://www.facebook.com/', '_blank'),
   linkedin: () => window.open('https://www.linkedin.com/in/othi-raja-45176b255/', '_blank'),
   github: () => window.open('https://github.com/Othi-Raja', '_blank'),
 };
@@ -17,24 +16,24 @@ const Footer = () => {
       <footer style={{ backgroundColor: '#183153', color: 'white', padding: '5px 0', textAlign: 'center' }}>
         <Container>
           <Row>
-            <Col lg={4}>
+            <Col sm={4}>
               <div className='footer-logo'>
                 Ôr
               </div>
             </Col >
-            <Col lg={4}>
+            <Col sm={4}>
               {/* Social Media Icons */}
-              <div>
+              <div className='d-flex gap-2 justify-content-center'>
                 <FaInstagram
                   id='link-Hover'
                   size={25}
                   onClick={socialMediaLinks.instagram}
                 />
-                <FaWhatsapp
+                {/* <FaFacebook
                   id='link-Hover'
                   size={25}
-                  onClick={socialMediaLinks.Whatsapp}
-                />
+                  onClick={socialMediaLinks.facebook}
+                /> */}
                 <FaLinkedin
                   id='link-Hover'
                   size={25}

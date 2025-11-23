@@ -1,14 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Agbalumo&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Kenia&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@100&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Codystar&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Agbalumo&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kenia&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Codystar&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
   background-color: rgb(255, 255, 255);
   color: rgb(0, 0, 0);
-  font-family: 'Kenia', serif;
+  font-family: "Kenia", serif;
   cursor: url(../icon/icons8-cursor-24.png), auto;
 }
 .css-0 {
@@ -107,8 +110,8 @@ body {
 } */
 .marquee {
   margin: 40px 40px 40px 0px;
-  border-top: .8px solid rgba(249, 108, 0, 0.407);
-  border-bottom: .2px solid rgba(249, 108, 0, 0.416);
+  border-top: 0.8px solid rgba(249, 108, 0, 0.407);
+  border-bottom: 0.2px solid rgba(249, 108, 0, 0.416);
   padding-top: 20px;
   padding-bottom: 20px;
   margin-bottom: 60px;
@@ -121,7 +124,12 @@ body {
 .marqueeElement:hover {
   /** TEXT GRADIENT */
   color: #ee4beb;
-  background-image: -webkit-linear-gradient(0deg, #ee4beb 3%, #19b735 90%, #9a8f3f 35%);
+  background-image: -webkit-linear-gradient(
+    0deg,
+    #ee4beb 3%,
+    #19b735 90%,
+    #9a8f3f 35%
+  );
   background-clip: text;
   -webkit-background-clip: text;
   /* text-fill-color: transparent; */
@@ -151,7 +159,7 @@ input::selection {
   padding: 1rem;
   background-color: #ffffffcf;
   color: rgb(0, 0, 0);
-  border-bottom: .9px solid #eaeaea;
+  border-bottom: 0.9px solid #eaeaea;
   cursor: pointer;
 }
 nav {
@@ -161,23 +169,23 @@ nav {
   cursor: pointer;
 }
 .logo {
-  font-family: 'Kenia', serif;
+  font-family: "Kenia", serif;
   font-size: 3rem;
   font-weight: bold;
   margin-left: 30px;
   text-decoration: underline;
 }
-.loader-container{
+.loader-container {
   position: fixed;
   height: 100%;
   width: 100%;
   background-color: #fffefe;
   z-index: 9999;
 }
-.loader-radius{
+.loader-radius {
   border-radius: 30px;
 }
-.loader { 
+.loader {
   z-index: 9999;
 }
 .nav-list {
@@ -218,7 +226,7 @@ nav {
   display: flex;
   justify-items: center;
   align-items: center;
-  font-family: 'Grenze Gotisch', serif;
+  font-family: "Grenze Gotisch", serif;
   /* font-family: monospace; */
   font-size: 50px;
   text-align: left;
@@ -274,7 +282,7 @@ nav {
   margin-bottom: 20px;
   width: 30%;
 }
-.about>h4 {
+.about > h4 {
   font-weight: bold;
   color: gray;
   font-size: 2.3rem;
@@ -378,7 +386,7 @@ margin-bottom: 10px;
     width: 100%;
   }
 }
-.about>h3 {
+.about > h3 {
   font-family: sans-serif;
   font-size: 50px;
 }
@@ -387,7 +395,7 @@ margin-bottom: 10px;
   font-size: 50px;
 }
 .ab-title {
-  font-family: 'Kenia', serif;
+  font-family: "Kenia", serif;
   display: inline-block;
   transform: rotate(20deg);
   padding-left: 1px;
@@ -417,16 +425,18 @@ margin-bottom: 10px;
 }
 .button-85:before {
   content: "";
-  background: linear-gradient(45deg,
-      #ff0000,
-      #ff7300,
-      #fffb00,
-      #48ff00,
-      #00ffd5,
-      #002bff,
-      #7a00ff,
-      #ff00c8,
-      #ff0000);
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
   position: absolute;
   top: -2px;
   left: -2px;
@@ -475,8 +485,8 @@ margin-bottom: 10px;
   text-decoration: none;
   list-style: none;
 }
-.nme>h1 {
-  font-family: 'Poppins', sans-serif;
+.nme > h1 {
+  font-family: "Poppins", sans-serif;
 }
 @media (max-width: 768px) {
   .text-center {
@@ -512,7 +522,7 @@ margin-bottom: 10px;
     margin-top: 20px;
   }
   .logo {
-    font-family: 'Kenia', serif;
+    font-family: "Kenia", serif;
     font-size: 2rem;
     font-weight: bold;
     text-decoration: underline;
@@ -523,7 +533,7 @@ margin-bottom: 10px;
     display: flex;
     justify-items: center;
     align-items: center;
-    font-family: 'Grenze Gotisch', serif;
+    font-family: "Grenze Gotisch", serif;
     font-size: 30px;
     text-align: left;
     font-weight: bolder;
@@ -539,7 +549,7 @@ margin-bottom: 10px;
     margin-right: 20px;
   }
 }
-@media (max-width:500px) {
+@media (max-width: 500px) {
   .text-center {
     display: flex;
     justify-content: center;
@@ -548,7 +558,7 @@ margin-bottom: 10px;
     padding: 20px;
   }
 }
-@media (max-width:388px) {
+@media (max-width: 388px) {
   .text-center {
     display: flex;
     justify-content: center;
@@ -618,7 +628,7 @@ margin-bottom: 10px;
     color: #000000;
   }
 }
-@media (max-width:330px) {
+@media (max-width: 330px) {
   .button-50 {
     width: 100%;
     margin-right: 10px;

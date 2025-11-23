@@ -6,6 +6,13 @@
         "img": "https://firebasestorage.googleapis.com/v0/b/image-f2f77.appspot.com/o/mrcheif.png?alt=media&token=013c2c3f-f5f0-4d64-b475-492fdfa5cd93",
         "url": "https://othi-raja.github.io/Mr.chef-/"
     },
+    {
+        "id": "2",
+        "title": "Mr.Chef",
+        "alt": "Mr.Chef",
+        "img": "https://firebasestorage.googleapis.com/v0/b/portfolioformdata-4caae.appspot.com/o/Screenshot%202025-11-12%20195900.png?alt=media&token=d79bc1bd-b4e2-4da5-80a6-6e2a4043bbe4",
+        "url": "https://othi-raja.github.io/Mr.chef-/"
+    },
 
     {
         "id": "2",
@@ -20,7 +27,49 @@
         "alt": "WowClothes.com",
         "img": "https://firebasestorage.googleapis.com/v0/b/image-f2f77.appspot.com/o/wowclothes.png?alt=media&token=0f1932bb-6413-41b3-90e9-a0f31f74b713",
         "url": "https://othi-raja.github.io/Wowclothes_landing_Page/"
+    },
+ {
+        "id":"4",
+        "title":"UrbanRider",
+        "alt":"UrbanRider",
+        "img":"https://firebasestorage.googleapis.com/v0/b/image-f2f77.appspot.com/o/urbanRider.png?alt=media&token=b59030ec-d040-4874-bc62-6e3ba4259e34",
+        "url":"https://urbanrider.in/"
+        },
+    {
+        "id":"5",
+        "title":"GoExtraMile",
+        "alt":"goextramile",
+        "img":"https://firebasestorage.googleapis.com/v0/b/portfolioformdata-4caae.appspot.com/o/Screenshot%202025-03-16%20161017.png?alt=media&token=340f1f84-1a2f-47db-b8fc-fed615b63391",
+        "url":"https://www.goextramile.in/"
+        },
+         {
+        "id": "6",
+        "title": "Amjathkhan",
+        "alt":"Amjathkhan",
+        "img": "https://firebasestorage.googleapis.com/v0/b/image-f2f77.appspot.com/o/am.png?alt=media&token=e0e66a05-6bc3-4b3d-aa7e-06377910de97",
+        "url": "https://amjathkhan.netlify.app/"
+    },
+    {
+        "id": "7",
+        "title": "HinaArora",
+        "alt":"HinaArora",
+        "img": "https://firebasestorage.googleapis.com/v0/b/image-f2f77.appspot.com/o/hina-arora.png?alt=media&token=292ef62e-8731-4587-8dcc-dcc8e507953a",
+        "url": "https://hinaarora.netlify.app/"
+    },
+    {
+        "id": "8",
+        "title": "Tanvi Khandelwal",
+        "alt":"Tanvi",
+        "img": "https://firebasestorage.googleapis.com/v0/b/image-f2f77.appspot.com/o/tanvi.png?alt=media&token=37e858e1-41b3-4c8c-b078-a63ce854dcae",
+        "url": "https://tanvi-khandelwal.netlify.app/"
     }
-
+    ,
+    {
+        "id": "9",
+        "title": "Deepika",
+        "alt":"Deepika",
+        "img": "https://firebasestorage.googleapis.com/v0/b/image-f2f77.appspot.com/o/dp.png?alt=media&token=df57b821-4e00-4b24-a10e-61f713135cd6",
+        "url": "https://deepika-saini.netlify.app/"
+    }
 
 ]
