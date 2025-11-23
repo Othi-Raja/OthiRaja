@@ -171,34 +171,8 @@ PERFORMANCE OF THIS SOFTWARE.
  */
 
 /**
- * @remix-run/router v1.21.0
+ * @license lucide-react v0.554.0 - ISC
  *
- * Copyright (c) Remix Software Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE.md file in the root directory of this source tree.
- *
- * @license MIT
- */
-
-/**
- * React Router DOM v6.28.0
- *
- * Copyright (c) Remix Software Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE.md file in the root directory of this source tree.
- *
- * @license MIT
- */
-
-/**
- * React Router v6.28.0
- *
- * Copyright (c) Remix Software Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE.md file in the root directory of this source tree.
- *
- * @license MIT
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
  */
