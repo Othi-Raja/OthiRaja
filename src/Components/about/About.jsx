@@ -1,14 +1,15 @@
- 
-import { FaHtml5, FaCss3Alt, FaReact,  FaNodeJs, FaPython, FaDatabase,  FaGithub,  } from "react-icons/fa";
-import { TbApi } from "react-icons/tb";
+// import { FaHtml5, FaCss3Alt, FaReact, FaNodeJs, FaPython, FaDatabase, FaGithub, } from "react-icons/fa";
+// import { TbApi } from "react-icons/tb";
 // import { FaGithub } from "react-icons/fa";
-import { SiJavascript, SiFirebase, SiAmazonaws, SiGit,  SiWordpress } from "react-icons/si";
+// import { SiJavascript, SiFirebase, SiAmazonaws, SiGit, SiWordpress } from "react-icons/si";
 // import { BiApi } from "react-icons/bi";
 import ProfileCard from "./aboutcard";
 import admin from '../asserts/admin.png'
 import AOS from "aos";
 import { useEffect } from "react";
 import "aos/dist/aos.css";
+import linktree from "../../icon/icons8-right-24.png"
+import SkillsSection from "./techSkill";
 export default function About() {
   useEffect(() => {
     // let handleRedirect = (url) => {
@@ -134,21 +135,46 @@ export default function About() {
           </div>
           {/* Right Column - Skills Overview */}
           <div className="space-y-8">
-            <div className="bg-white    dark:bg-[#2A2A2A] p-8 rounded-3xl border border-gray-100 dark:border-gray-800">
+            <div className=" p-8 rounded-3xl ">
               {/* <h3>About Me</h3> */}
               <p
-                className="text-[15px] leading-relaxed text-gray-700 mb-6 text-justify"
+                className="text-[16px] leading-relaxed text-gray-700 mb-6 text-justify"
                 style={{ fontFamily: "Plus Jakarta Sans, sans-serif" }}
                 data-aos="fade-in"
                 data-aos-duration="1000"
               >
-                I'm a passionate Computer Engineering student with knowledge in full-stack web development.
-                With over <span className="font-semibold text-blue-600">1 year of hands-on experience</span>, I'm dedicated to creating
-                innovative digital solutions that solve real-world problems.
+                I'm a passionate Computer Engineering student with strong knowledge in full-stack web development.
+                With over
+                <span className="font-semibold text-blue-600"> 1 year of hands-on experience </span>,
+                I specialize in building responsive user interfaces, scalable backend systems,
+                and intelligent features powered by AI and machine learning.
+                I enjoy turning ideas into real products, optimizing performance, and delivering smooth user experiences.
+                I’m constantly learning new technologies and striving to grow as a developer while contributing to impactful projects.
               </p>
-              <h6 className="underline mb-4">Tech Stack</h6 >
+              {/* LinkedIn Button */}
+              <button
+                onClick={() => window.open('https://www.linkedin.com/in/othi-raja/', '_blank')}
+                className="
+    flex items-center underline
+    text-gray-600 
+    hover:text-gray-900 
+    transition-all duration-300 
+    hover:scale-x-[1.05] 
+    cursor-pointer
+  "
+                style={{ background: "none", border: "none", outline: "none" }}
+              >
+                LinkedIn
+                <img
+                  src={linktree}
+                  alt="icon"
+                  style={{ height: "20px", paddingLeft: "10px" }}
+                  className="opacity-70 hover:opacity-100 transition duration-300"
+                />
+              </button>
+              {/* <h6 className="underline mb-4">Tech Stack</h6 > */}
               <div className="flex flex-wrap gap-4 justify-center">
-                {[
+                {/* {[
                   { name: "HTML", icon: <FaHtml5 className="text-3xl text-orange-500" />, ani: "fade-in", duration: "100" },
                   { name: "CSS", icon: <FaCss3Alt className="text-3xl text-blue-500" />, ani: "fade-in", duration: "150" },
                   { name: "React.js", icon: <FaReact className="text-3xl text-blue-400" />, ani: "fade-in", duration: "200" },
@@ -167,13 +193,13 @@ export default function About() {
                     data-aos-duration={skill.duration}
                     data-aos-easing="ease-in-sine" >
                     <div>{skill.icon}</div>
-                    {/* <span className="text-xs text-gray-600 dark:text-gray-400 text-center">{skill.name}</span> */}
                   </div>
-                ))}
+                ))} */}
               </div>
             </div>
           </div>
         </div>
+        <SkillsSection />
       </div>
     </section>
   );
